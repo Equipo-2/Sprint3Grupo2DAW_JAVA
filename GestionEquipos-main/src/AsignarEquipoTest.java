@@ -229,8 +229,7 @@ class AsignarEquipoTest {
 			equipo.setNombreEquipo(nombre);
 			asignarEquipo.setEquipo(equipo);
 			Equipo equipoGuardado = asignarEquipo.getEquipo();
-			assertEquals(null,equipoGuardado.getNombreEquipo());
-			assertNotNull(equipoGuardado);
+			assertNull(equipoGuardado);
 		}
 
 		//Asignar equipo que exista pero que no tenga nombre
@@ -250,8 +249,10 @@ class AsignarEquipoTest {
 		void testAsignarEquipoRankingInválido() {
 			AsignarEquipo asignarEquipo = new AsignarEquipo();
 			Equipo equipo = new Equipo();
+			String nombre = "Tzedakah";
 			int ranking= -1;
 			equipo.setRanking(ranking);
+			equipo.setNombreEquipo(nombre);
 			asignarEquipo.setEquipo(equipo);
 			Equipo equipoGuardado = asignarEquipo.getEquipo();
 			assertNull(equipoGuardado);
@@ -263,8 +264,8 @@ class AsignarEquipoTest {
 		void testAsignarEquipoSinRanking() {
 			AsignarEquipo asignarEquipo = new AsignarEquipo();
 			Equipo equipo = new Equipo();
-			int ranking= 0;
-			equipo.setRanking(ranking);
+			String nombre = "Overgeared";
+			equipo.setNombreEquipo(nombre);
 			asignarEquipo.setEquipo(equipo);
 			Equipo equipoGuardado = asignarEquipo.getEquipo();
 			assertNull(equipoGuardado);
