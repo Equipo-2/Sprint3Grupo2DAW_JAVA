@@ -16,6 +16,72 @@ class AsignarEquipoTest {
 	 * Test method for {@link AsignarEquipo#AsignarEquipo()}.
 	 */
 	
+	//Asignar un jugador que sea nulo
+	void testSetJugadorNulo() {
+		AsignarEquipo asignarEquipo = new AsignarEquipo();
+
+		Jugador jugador = new Jugador();
+		String nombrevalido = "";
+		int edadValida=0;//No hay forma de poner un int como nulo
+		String idiomaValido = "";
+		jugador.setNombreJugador(nombrevalido);
+		jugador.setEdad(edadValida);
+		jugador.setIdioma(idiomaValido);
+		
+		asignarEquipo.setJugador(jugador);
+		
+		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
+		assertNotNull(jugadorGuardado);
+		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
+		assertEquals(edadValida, jugadorGuardado.getEdad());
+		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
+	}
+	
+	//Asignar un jugador que sea nulo
+	@Test
+	void testSetJugadorValido() {
+		AsignarEquipo asignarEquipo = new AsignarEquipo();
+
+		Jugador jugador = new Jugador();
+		String nombrevalido = "Alejandro";
+		int edadValida = 20;
+		String idiomaValido = "Español";
+		jugador.setNombreJugador(nombrevalido);
+		jugador.setEdad(edadValida);
+		jugador.setIdioma(idiomaValido);
+		
+		asignarEquipo.setJugador(jugador);
+		
+		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
+		assertNotNull(jugadorGuardado);
+		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
+		assertEquals(edadValida, jugadorGuardado.getEdad());
+		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
+	}
+	
+	@Test
+	void testSetJugadorNombreInvalido() {
+		AsignarEquipo asignarEquipo = new AsignarEquipo();
+
+		Jugador jugador = new Jugador();
+		String nombrevalido = "Eva";
+		int edadValida = 20;
+		String idiomaValido = "Español";
+		jugador.setNombreJugador(nombrevalido);
+		jugador.setEdad(edadValida);
+		jugador.setIdioma(idiomaValido);
+		
+		asignarEquipo.setJugador(jugador);
+		
+		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
+		assertNotNull(jugadorGuardado);
+		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
+		assertEquals(edadValida, jugadorGuardado.getEdad());
+		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
+	}
+	
+	
+	
 	//Asignar equipo que exista y tenga todos los campos validos
 		@Test
 		void testAsignarEquipoCamposValidos() {
@@ -92,14 +158,5 @@ class AsignarEquipoTest {
 			Equipo equipoGuardado = asignarEquipo.getEquipo();
 			assertNull(equipoGuardado);
 		}
-	@Test
-	void testSetJugador() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testGetJugador() {
-		fail("Not yet implemented");
-	}
 
 }
