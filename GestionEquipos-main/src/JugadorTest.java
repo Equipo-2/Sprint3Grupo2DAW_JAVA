@@ -119,5 +119,9 @@ class JugadorTest {
 		jugador.setEdad(edadJugador);
 		assertEquals(edadJugador,jugador.getEdad());
 	}
+	
+	//##############################      IDIOMA      ###################################
+	
+	
 
 }
