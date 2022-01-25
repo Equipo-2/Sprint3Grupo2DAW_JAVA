@@ -16,108 +16,107 @@ class EquipoTest {
 	
 //###################################      NOMBRE      ###################################
 
-	//Guardar jugador con 0 caracteres
-	@Test void testSetNombreJugadorInvalidoVacio() {
-		Jugador jugador = new Jugador();
-		String nombreJugador = "";
-		jugador.setNombreJugador(nombreJugador);
-		assertEquals(null, jugador.getNombreJugador());
+	//Guardar equipo con 0 caracteres
+	@Test void testSetNombreEquipoInvalidoVacio() {
+		Equipo equipo = new Equipo();
+		String nombreEquipo = "";
+		equipo.setNombreEquipo(nombreEquipo);
+		assertEquals(null,equipo.getNombreEquipo());
 	}
 
-	//Guardar jugador con menos de 4 caracteres
-	@Test void testSetNombreJugadorInvalidoMinimoCaracteres() {
-		Jugador jugador = new Jugador();
-		String nombreJugador = "Ana";
-		jugador.setNombreJugador(nombreJugador);
-		assertEquals(null,jugador.getNombreJugador());
+	//Guardar equipo con menos de 4 caracteres
+	@Test void testSetNombreEquipoInvalidoMinimoCaracteres() {
+		Equipo equipo = new Equipo();
+		String nombreEquipo = "Sol";
+		equipo.setNombreEquipo(nombreEquipo);
+		assertEquals(null,equipo.getNombreEquipo());
 	}
 
-	//Guardar jugador con 4 caracteres
-	@Test void testSetNombreJugadorValidoMinimoCaracteres() {
-		Jugador jugador = new Jugador();
-		String nombreJugador = "Juan";
-		jugador.setNombreJugador(nombreJugador);
-		assertEquals(nombreJugador,jugador.getNombreJugador());
+	//Guardar equipo con 5 caracteres
+	@Test void testSetNombreEquipoValidoMinimoCaracteres() {
+		Equipo equipo = new Equipo();
+		String nombreEquipo = "Prais";
+		equipo.setNombreEquipo(nombreEquipo);
+		assertEquals(nombreEquipo,equipo.getNombreEquipo());
 	}
 
-	//Guardar jugador con más de 4 caracteres
-	@Test void testSetNombreJugadorValido() {
-		Jugador jugador = new Jugador();
-		String nombreJugador = "Mortimer";
-		jugador.setNombreJugador(nombreJugador);
-		assertEquals(nombreJugador, jugador.getNombreJugador());
+	//Guardar equipo con más de 5 caracteres
+	@Test void testSetNombreEquipoValido() {
+		Equipo equipo = new Equipo();
+		String nombreEquipo = "Los osos";
+		equipo.setNombreEquipo(nombreEquipo);
+		assertEquals(nombreEquipo,equipo.getNombreEquipo());
 	}
 
-	//Guardar jugador con menos de 20 caracteres
-	@Test void testSetNombreJugadorValido2() {
-		Jugador jugador = new Jugador();
-		String nombreJugador = "Pepe Domingo";
-		jugador.setNombreJugador(nombreJugador);
-		assertEquals(nombreJugador,jugador.getNombreJugador());
+	//Guardar equipo con menos de 20 caracteres
+	@Test void testSetNombreEquipoValido2() {
+		Equipo equipo = new Equipo();
+		String nombreEquipo = "PraiseTheSun";
+		equipo.setNombreEquipo(nombreEquipo);
+		assertEquals(nombreEquipo,equipo.getNombreEquipo());
 	}
 
-	//Guardar jugador con 20 caracteres
-	@Test void testSetNombreJugadorValidoMaximoCaracteres() {
-		Jugador jugador = new Jugador();
-		String nombreJugador = "Pepe Domingo CastaÃ±o";
-		jugador.setNombreJugador(nombreJugador);
-		assertEquals(nombreJugador,jugador.getNombreJugador());
+	//Guardar equipo con 20 caracteres
+	@Test void testSetNombreEquipoValidoMaximoCaracteres() {
+		Equipo equipo = new Equipo();
+		String nombreEquipo = "File Anan Rizably Se";
+		equipo.setNombreEquipo(nombreEquipo);
+		assertEquals(nombreEquipo,equipo.getNombreEquipo());
 	}
 
-	//Guardar jugador con más de 20 caracteres
-	@Test void testSetNombreJugadorInvalidoMaximoCaracteres() {
-		Jugador jugador = new Jugador();
-		String nombreJugador = "Pepe Domingo CastaÃ±o ";
-		jugador.setNombreJugador(nombreJugador);
-		assertEquals(null,jugador.getNombreJugador());
+	//Guardar equipo con más de 20 caracteres
+	@Test void testSetNombreEquipoInvalidoMaximoCaracteres() {
+		Equipo equipo = new Equipo();
+		String nombreEquipo = "Supercalifragilisticoespialidoso";
+		equipo.setNombreEquipo(nombreEquipo);
+		assertEquals(null,equipo.getNombreEquipo());
 	}
 	
 //###################################      RANKING      ###################################
 	
-	//Guardar edad con INT = 'char'
-	//El valor numérico de 'M' es aceptado como edad >= 18, terrible error
+	//Guardar equipo con ranking 0
 	@Test
-	void testSetEdadInvalidoChar () {
-		Jugador jugador = new Jugador();
-		int edadJugador = 'M';
-		jugador.setEdad(edadJugador);
-//		assertEquals(null,jugador.getEdad());
+	void testSetRankingInvalido () {
+		Equipo equipo = new Equipo();
+		int ranking = 0;
+		equipo.setRanking(ranking);
+		assertEquals(0,equipo.getRanking());
 	}
 	
-	//Guardar edad con INT = 0
+	//Guardar equipo con ranking 1
 	@Test
-	void testSetEdadInvalidoMinimo () {
-		Jugador jugador = new Jugador();
-		int edadJugador = 0;
-		jugador.setEdad(edadJugador);
-//		assertEquals(null,jugador.getEdad());
+	void testSetRankingValidoMinimo () {
+		Equipo equipo = new Equipo();
+		int ranking = 1;
+		equipo.setRanking(ranking);
+		assertEquals(ranking,equipo.getRanking());
 	}
 	
-	//Guardar edad con INT < 18
+	//Guardar equipo con ranking 5
 	@Test
-	void testSetEdadInvalidoMaximo () {
-		Jugador jugador = new Jugador();
-		int edadJugador = 17;
-		jugador.setEdad(edadJugador);
-//		assertEquals(null,jugador.getEdad());
+	void testSetRankingValido () {
+		Equipo equipo = new Equipo();
+		int ranking = 5;
+		equipo.setRanking(ranking);
+		assertEquals(ranking,equipo.getRanking());
 	}
 	
-	//Guardar edad con INT = 18
+	//Guardar equipo con ranking 10
 	@Test
-	void testSetEdadValidoMinimo () {
-		Jugador jugador = new Jugador();
-		int edadJugador = 18;
-		jugador.setEdad(edadJugador);
-		assertEquals(edadJugador,jugador.getEdad());
+	void testSetRankingValidoMaximo () {
+		Equipo equipo = new Equipo();
+		int ranking = 10;
+		equipo.setRanking(ranking);
+		assertEquals(ranking,equipo.getRanking());
 	}
-	
-	//Guardar edad con INT > 18
+
+	//Guardar equipo con ranking 0
 	@Test
-	void testSetEdadValido () {
-		Jugador jugador = new Jugador();
-		int edadJugador = 19;
-		jugador.setEdad(edadJugador);
-		assertEquals(edadJugador,jugador.getEdad());
+	void testSetRankingInvalidoMaximo () {
+		Equipo equipo = new Equipo();
+		int ranking = 11;
+		equipo.setRanking(ranking);
+		assertEquals(0,equipo.getRanking());
 	}
 
 }
