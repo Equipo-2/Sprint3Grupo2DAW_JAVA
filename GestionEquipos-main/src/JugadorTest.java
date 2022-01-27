@@ -165,6 +165,14 @@ class JugadorTest {
 	//Guardar idioma incorrecto
 	@Test void testSetIdiomaJugadorIncorrecto() {
 		Jugador jugador = new Jugador();
+		String idiomaValido = "Japonés";
+		jugador.setIdioma(idiomaValido);
+		assertEquals(idiomaValido, jugador.getIdioma());
+	}
+	
+	//Guardar idioma valor no aceptado
+	@Test void testSetIdiomaJugadorNoAceptado() {
+		Jugador jugador = new Jugador();
 		String idiomaValido = "5";
 		jugador.setIdioma(idiomaValido);
 		assertEquals(idiomaValido, jugador.getIdioma());
