@@ -44,10 +44,10 @@ class AsignarEquipoTest {
 
 		Jugador jugador = new Jugador();
 		String nombrevalido = "Alejandro";
-
+		int edadValida = 20;
 		String idiomaValido = "Español";
 		jugador.setNombreJugador(nombrevalido);
-
+		jugador.setEdad(edadValida);
 		jugador.setIdioma(idiomaValido);
 		
 		asignarEquipo.setJugador(jugador);
@@ -55,7 +55,7 @@ class AsignarEquipoTest {
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNotNull(jugadorGuardado);
 		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
-		assertNull(jugadorGuardado.getEdad());
+		assertEquals(edadValida, jugadorGuardado.getEdad());
 		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
 	}
 	
@@ -154,7 +154,7 @@ class AsignarEquipoTest {
 
 		Jugador jugador = new Jugador();
 		String nombrevalido = "Alejandro";
-		int edadValida = 0;
+		int edadValida = 20;
 		String idiomaValido = "Árabe";
 		jugador.setNombreJugador(nombrevalido);
 		jugador.setEdad(edadValida);
@@ -176,7 +176,7 @@ class AsignarEquipoTest {
 
 		Jugador jugador = new Jugador();
 		String nombrevalido = "Alejandro";
-		int edadValida = 0;
+		int edadValida = 20;
 		String idiomaValido = "";
 		jugador.setNombreJugador(nombrevalido);
 		jugador.setEdad(edadValida);
