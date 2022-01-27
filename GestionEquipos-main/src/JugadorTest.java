@@ -59,7 +59,7 @@ class JugadorTest {
 	//Guardar jugador con 20 caracteres
 	@Test void testSetNombreJugadorValidoMaximoCaracteres() {
 		Jugador jugador = new Jugador();
-		String nombreJugador = "Pepe Domingo Castaño";
+		String nombreJugador = "Pepe Domingo CastaÃ±o";
 		jugador.setNombreJugador(nombreJugador);
 		assertEquals(nombreJugador,jugador.getNombreJugador());
 	}
@@ -67,12 +67,23 @@ class JugadorTest {
 	//Guardar jugador con mÃ¡s de 20 caracteres
 	@Test void testSetNombreJugadorInvalidoMaximoCaracteres() {
 		Jugador jugador = new Jugador();
-		String nombreJugador = "Pepe Domingo Castaño ";
+		String nombreJugador = "Pepe Domingo CastaÃ±o ";
 		jugador.setNombreJugador(nombreJugador);
 		assertEquals(null,jugador.getNombreJugador());
 	}
 	
 //###################################      EDAD      ###################################
+	
+	//Guardar edad con INTEGER = null
+	@Test
+	void testSetEdadInvalidoNull () {
+		Jugador jugador = new Jugador();
+	    assertThrows(NullPointerException.class, ()->{
+		    Integer edadJugador = null;
+		    jugador.setEdad(edadJugador);
+		    assertEquals(null, (Integer)jugador.getEdad());
+	    });
+	}
 	
 	//Guardar edad con INT = 0
 	@Test
@@ -80,7 +91,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		int edadJugador = 0;
 		jugador.setEdad(edadJugador);
-		assertEquals(0,jugador.getEdad());
+		assertEquals(null, (Integer)jugador.getEdad());
 	}
 	
 	//Guardar edad con INT < 18
@@ -89,7 +100,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		int edadJugador = 17;
 		jugador.setEdad(edadJugador);
-		assertEquals(0,jugador.getEdad());
+		assertEquals(null, (Integer)jugador.getEdad());
 	}
 	
 	//Guardar edad con INT = 18
@@ -123,7 +134,7 @@ class JugadorTest {
 	//Guardar idioma correcto
 	@Test void testSetIdiomaJugadorCorrecto1() {
 		Jugador jugador = new Jugador();
-		String idiomaValido = "Español";
+		String idiomaValido = "EspaÃ±ol";
 		jugador.setIdioma(idiomaValido);
 		assertEquals(idiomaValido, jugador.getIdioma());
 	}
@@ -131,7 +142,7 @@ class JugadorTest {
 	//Guardar idioma correcto
 	@Test void testSetIdiomaJugadorCorrecto2() {
 		Jugador jugador = new Jugador();
-		String idiomaValido = "Inglés";
+		String idiomaValido = "InglÃ©s";
 		jugador.setIdioma(idiomaValido);
 		assertEquals(idiomaValido, jugador.getIdioma());
 	}
@@ -139,7 +150,7 @@ class JugadorTest {
 	//Guardar idioma correcto
 	@Test void testSetIdiomaJugadorCorrecto3() {
 		Jugador jugador = new Jugador();
-		String idiomaValido = "Francés";
+		String idiomaValido = "FrancÃ©s";
 		jugador.setIdioma(idiomaValido);
 		assertEquals(idiomaValido, jugador.getIdioma());
 	}
@@ -147,7 +158,7 @@ class JugadorTest {
 	//Guardar idioma correcto
 	@Test void testSetIdiomaJugadorCorrecto4() {
 		Jugador jugador = new Jugador();
-		String idiomaValido = "Alemán";
+		String idiomaValido = "AlemÃ¡n";
 		jugador.setIdioma(idiomaValido);
 		assertEquals(idiomaValido, jugador.getIdioma());
 	}
@@ -155,7 +166,7 @@ class JugadorTest {
 	//Guardar idioma incorrecto
 	@Test void testSetIdiomaJugadorIncorrecto() {
 		Jugador jugador = new Jugador();
-		String idiomaValido = "Japonés";
+		String idiomaValido = "JaponÃ©s";
 		jugador.setIdioma(idiomaValido);
 		assertEquals(idiomaValido, jugador.getIdioma());
 	}
