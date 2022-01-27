@@ -40,7 +40,7 @@ class JugadorTest {
 		assertEquals(nombreJugador,jugador.getNombreJugador());
 	}
 
-	//Guardar jugador con m�s de 4 caracteres
+	//Guardar jugador con más de 4 caracteres
 	@Test void testSetNombreJugadorValido() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Mortimer";
@@ -64,7 +64,7 @@ class JugadorTest {
 		assertEquals(nombreJugador,jugador.getNombreJugador());
 	}
 
-	//Guardar jugador con m�s de 20 caracteres
+	//Guardar jugador con más de 20 caracteres
 	@Test void testSetNombreJugadorInvalidoMaximoCaracteres() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Pepe Domingo Castaño ";
@@ -74,14 +74,15 @@ class JugadorTest {
 	
 //###################################      EDAD      ###################################
 	
-	//Guardar edad con INT = 'char'
-	//El valor num�rico de 'M' es aceptado como edad >= 18, terrible error
+	//Guardar edad con INTEGER = null
 	@Test
-	void testSetEdadInvalidoChar () {
+	void testSetEdadInvalidoNull () {
 		Jugador jugador = new Jugador();
-		int edadJugador = 'M';
-		jugador.setEdad(edadJugador);
-//		assertEquals(null,jugador.getEdad());
+	    assertThrows(NullPointerException.class, ()->{
+		    Integer edadJugador = null;
+		    jugador.setEdad(edadJugador);
+		    assertEquals(null, (Integer)jugador.getEdad());
+	    });
 	}
 	
 	//Guardar edad con INT = 0
@@ -90,7 +91,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		int edadJugador = 0;
 		jugador.setEdad(edadJugador);
-//		assertEquals(null,jugador.getEdad());
+		assertEquals(null, (Integer)jugador.getEdad());
 	}
 	
 	//Guardar edad con INT < 18
@@ -99,7 +100,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		int edadJugador = 17;
 		jugador.setEdad(edadJugador);
-//		assertEquals(null,jugador.getEdad());
+		assertEquals(null, (Integer)jugador.getEdad());
 	}
 	
 	//Guardar edad con INT = 18
@@ -119,5 +120,64 @@ class JugadorTest {
 		jugador.setEdad(edadJugador);
 		assertEquals(edadJugador,jugador.getEdad());
 	}
+	
+	//##############################      IDIOMA      ###################################
+	
+	//Guardar idioma nulo
+	@Test void testSetIdiomaJugadorNull() {
+		Jugador jugador = new Jugador();
+		String idiomaValido = "";
+		jugador.setIdioma(idiomaValido);
+		assertEquals(idiomaValido, jugador.getIdioma());
+	}
+	
+	//Guardar idioma correcto
+	@Test void testSetIdiomaJugadorCorrecto1() {
+		Jugador jugador = new Jugador();
+		String idiomaValido = "Español";
+		jugador.setIdioma(idiomaValido);
+		assertEquals(idiomaValido, jugador.getIdioma());
+	}
+	
+	//Guardar idioma correcto
+	@Test void testSetIdiomaJugadorCorrecto2() {
+		Jugador jugador = new Jugador();
+		String idiomaValido = "Inglés";
+		jugador.setIdioma(idiomaValido);
+		assertEquals(idiomaValido, jugador.getIdioma());
+	}
+	
+	//Guardar idioma correcto
+	@Test void testSetIdiomaJugadorCorrecto3() {
+		Jugador jugador = new Jugador();
+		String idiomaValido = "Francés";
+		jugador.setIdioma(idiomaValido);
+		assertEquals(idiomaValido, jugador.getIdioma());
+	}
+	
+	//Guardar idioma correcto
+	@Test void testSetIdiomaJugadorCorrecto4() {
+		Jugador jugador = new Jugador();
+		String idiomaValido = "Alemán";
+		jugador.setIdioma(idiomaValido);
+		assertEquals(idiomaValido, jugador.getIdioma());
+	}
+	
+	//Guardar idioma incorrecto
+	@Test void testSetIdiomaJugadorIncorrecto() {
+		Jugador jugador = new Jugador();
+		String idiomaValido = "Japonés";
+		jugador.setIdioma(idiomaValido);
+		assertEquals(idiomaValido, jugador.getIdioma());
+	}
+	
+	//Guardar idioma valor no aceptado
+	@Test void testSetIdiomaJugadorNoAceptado() {
+		Jugador jugador = new Jugador();
+		String idiomaValido = "5";
+		jugador.setIdioma(idiomaValido);
+		assertEquals(idiomaValido, jugador.getIdioma());
+	}
+	
 
 }
