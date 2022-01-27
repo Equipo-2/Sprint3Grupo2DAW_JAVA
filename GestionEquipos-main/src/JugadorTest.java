@@ -40,7 +40,7 @@ class JugadorTest {
 		assertEquals(nombreJugador,jugador.getNombreJugador());
 	}
 
-	//Guardar jugador con mÃ¡s de 4 caracteres
+	//Guardar jugador con más de 4 caracteres
 	@Test void testSetNombreJugadorValido() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Mortimer";
@@ -64,7 +64,7 @@ class JugadorTest {
 		assertEquals(nombreJugador,jugador.getNombreJugador());
 	}
 
-	//Guardar jugador con mÃ¡s de 20 caracteres
+	//Guardar jugador con más de 20 caracteres
 	@Test void testSetNombreJugadorInvalidoMaximoCaracteres() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Pepe Domingo Castaño ";
