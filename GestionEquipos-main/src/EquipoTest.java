@@ -74,13 +74,13 @@ class EquipoTest {
 	
 //###################################      RANKING      ###################################
 	
-	//Guardar equipo con ranking 0
+	//Guardar equipo con ranking -1
 	@Test
 	void testSetRankingInvalido () {
 		Equipo equipo = new Equipo();
-		int ranking = 0;
+		int ranking = -1;
 		equipo.setRanking(ranking);
-		assertEquals(0,equipo.getRanking());
+		assertEquals(-1,equipo.getRanking());
 	}
 	
 	//Guardar equipo con ranking 1
@@ -110,13 +110,13 @@ class EquipoTest {
 		assertEquals(ranking,equipo.getRanking());
 	}
 
-	//Guardar equipo con ranking 0
+	//Guardar equipo con ranking 11
 	@Test
 	void testSetRankingInvalidoMaximo () {
 		Equipo equipo = new Equipo();
 		int ranking = 11;
 		equipo.setRanking(ranking);
-		assertEquals(0,equipo.getRanking());
+		assertEquals(-1,equipo.getRanking());
 	}
 
 }
