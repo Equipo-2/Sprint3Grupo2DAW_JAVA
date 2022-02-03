@@ -72,6 +72,14 @@ class EquipoTest {
 		assertEquals(null,equipo.getNombreEquipo());
 	}
 	
+	//Guardar equipo con caracteres invalidos
+	@Test void testSetNombreEquipoInvalidoCaracteresInvalidos() {
+		Equipo equipo = new Equipo();
+		String nombreEquipo = "Los Limones_01";
+		equipo.setNombreEquipo(nombreEquipo);
+		assertEquals(null,equipo.getNombreEquipo());
+	}
+	
 //###################################      RANKING      ###################################
 	
 	//Guardar equipo con ranking -1
