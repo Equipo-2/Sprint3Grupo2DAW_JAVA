@@ -1,25 +1,39 @@
 
 public class Jugador {
 	private String nombre;
-	private int edad;
 	private String idioma;
+	private int edad;
 	
 	public Jugador () {
 			
 		}
-	
+
 	public void setNombreJugador(String nombre) {
-		//code here
+
+		if (nombre.length()<4 || nombre.length()>20) {
+			this.nombre = "";
+		}else {
+			this.nombre = nombre;
+		}
 	}
-	
+
 	public void setEdad(int edad) {
-		//code here
+		
+		if (edad<18 || edad>99) {
+			this.edad = 0;
+		}else {
+			this.edad = edad;
+		}
 	}
+
 	public void setIdioma(String idioma) {
 		//code here
 	}
-	
 
+	public void tipoJugador(String tipo) {
+
+	}	
+	
 	public String getIdioma() {
 		return idioma;
 	}
