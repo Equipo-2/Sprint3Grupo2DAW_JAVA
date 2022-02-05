@@ -180,10 +180,84 @@ class JugadorTest {
 //	}
 	
 	//##############################      TIPO DE JUGADOR      ###################################
-	
-	//Guardar tipoJugador nulo
-	@Test void testSetTipoJugadorNull() {
 
+	//Guardar tipo de jugador con 17
+	@Test
+	void tipoJugadorInvalidoMinimo () {
+		Jugador jugador = new Jugador();
+		int edad = 17;
+		jugador.tipoJugador(edad);
+		assertEquals(null, jugador.tipoJugador(edad));
+	}
+	
+	//Guardar tipo de jugador con 18
+	@Test
+	void tipoJugadorJuniorMinimo () {
+		Jugador jugador = new Jugador();
+		int edad = 18;
+		String tipo = "Junior";
+		jugador.tipoJugador(edad);
+		assertEquals(tipo, jugador.tipoJugador(edad));
+	}
+	
+	//Guardar tipo de jugador con 25
+	@Test
+	void tipoJugadorJuniorMaximo () {
+		Jugador jugador = new Jugador();
+		int edad = 25;
+		String tipo = "Junior";
+		jugador.tipoJugador(edad);
+		assertEquals(tipo, jugador.tipoJugador(edad));
+	}
+	
+	//Guardar tipo de jugador con 26
+	@Test
+	void tipoJugadorSeniorMinimo () {
+		Jugador jugador = new Jugador();
+		int edad = 26;
+		String tipo = "Senior";
+		jugador.tipoJugador(edad);
+		assertEquals(tipo, jugador.tipoJugador(edad));
+	}
+	
+	//Guardar tipo de jugador con 35
+	@Test
+	void tipoJugadorSeniorMaximo () {
+		Jugador jugador = new Jugador();
+		int edad = 35;
+		String tipo = "Senior";
+		jugador.tipoJugador(edad);
+		assertEquals(tipo, jugador.tipoJugador(edad));
+	}
+	
+	//Guardar tipo de jugador con 36
+	@Test
+	void tipoJugadorMasterMinimo () {
+		Jugador jugador = new Jugador();
+		int edad = 36;
+		String tipo = "Master";
+		jugador.tipoJugador(edad);
+		assertEquals(tipo, jugador.tipoJugador(edad));
+	}
+	
+	//Guardar tipo de jugador con 99
+	@Test
+	void tipoJugadorMasterMaximo () {
+		Jugador jugador = new Jugador();
+		int edad = 99;
+		String tipo = "Master";
+		jugador.tipoJugador(edad);
+		assertEquals(tipo, jugador.tipoJugador(edad));
+	}
+	
+	//Guardar tipo de jugador con 100
+	@Test
+	void tipoJugadorSuperMasterMinimo () {
+		Jugador jugador = new Jugador();
+		int edad = 100;
+		String tipo = "SuperMaster";
+		jugador.tipoJugador(edad);
+		assertEquals(tipo, jugador.tipoJugador(edad));
 	}
 
 }
