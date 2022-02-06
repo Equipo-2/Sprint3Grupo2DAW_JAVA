@@ -55,7 +55,7 @@ public class Jugador {
 			this.tipo = "Senior";
 		}else if (edad>35 && edad<=99) {
 			this.tipo = "Master";
-		}else if (edad<=100) {
+		}else if (edad>=100) {
 			this.tipo = "SuperMaster";
 		}else {
 			this.tipo = null;
