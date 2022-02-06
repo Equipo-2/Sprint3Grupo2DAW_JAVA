@@ -33,14 +33,14 @@ public class Jugador {
 
 	public void setIdioma(String idioma) {
 		
-		if (idioma.equals("español")) {
-			this.idioma = "Español";
-		}else if (idioma.equals("inglés")) {
-			this.idioma = "Inglés";
-		}else if (idioma.equals("francés")) {
-			this.idioma = "Francés";
-		}else if (idioma.equals("alemán")) {
-			this.idioma = "Alemán";
+		if (idioma.equals("castellano")) {
+			this.idioma = "castellano";
+		}else if (idioma.equals("ingles")) {
+			this.idioma = "ingles";
+		}else if (idioma.equals("frances")) {
+			this.idioma = "frances";
+		}else if (idioma.equals("aleman")) {
+			this.idioma = "aleman";
 		}else {
 			this.idioma = null;
 		}

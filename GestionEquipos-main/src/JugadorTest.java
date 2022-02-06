@@ -128,13 +128,13 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String idiomaValido = "";
 		jugador.setIdioma(idiomaValido);
-		assertEquals(idiomaValido, jugador.getIdioma());
+		assertEquals(null, jugador.getIdioma());
 	}
 	
 	//Guardar idioma correcto
 	@Test void testSetIdiomaJugadorCorrecto1() {
 		Jugador jugador = new Jugador();
-		String idiomaValido = "Español";
+		String idiomaValido = "castellano";
 		jugador.setIdioma(idiomaValido);
 		assertEquals(idiomaValido, jugador.getIdioma());
 	}
@@ -142,7 +142,7 @@ class JugadorTest {
 	//Guardar idioma correcto
 	@Test void testSetIdiomaJugadorCorrecto2() {
 		Jugador jugador = new Jugador();
-		String idiomaValido = "Inglés";
+		String idiomaValido = "ingles";
 		jugador.setIdioma(idiomaValido);
 		assertEquals(idiomaValido, jugador.getIdioma());
 	}
@@ -150,7 +150,7 @@ class JugadorTest {
 	//Guardar idioma correcto
 	@Test void testSetIdiomaJugadorCorrecto3() {
 		Jugador jugador = new Jugador();
-		String idiomaValido = "Francés";
+		String idiomaValido = "frances";
 		jugador.setIdioma(idiomaValido);
 		assertEquals(idiomaValido, jugador.getIdioma());
 	}
@@ -158,7 +158,7 @@ class JugadorTest {
 	//Guardar idioma correcto
 	@Test void testSetIdiomaJugadorCorrecto4() {
 		Jugador jugador = new Jugador();
-		String idiomaValido = "Alemán";
+		String idiomaValido = "aleman";
 		jugador.setIdioma(idiomaValido);
 		assertEquals(idiomaValido, jugador.getIdioma());
 	}
@@ -166,9 +166,9 @@ class JugadorTest {
 	//Guardar idioma incorrecto
 	@Test void testSetIdiomaJugadorIncorrecto() {
 		Jugador jugador = new Jugador();
-		String idiomaValido = "Japonés";
+		String idiomaValido = "japones";
 		jugador.setIdioma(idiomaValido);
-		assertEquals(idiomaValido, jugador.getIdioma());
+		assertEquals(null, jugador.getIdioma());
 	}
 	
 	//Guardar idioma valor no aceptado
@@ -176,7 +176,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String idiomaValido = "5";
 		jugador.setIdioma(idiomaValido);
-		assertEquals(idiomaValido, jugador.getIdioma());
+		assertEquals(null, jugador.getIdioma());
 	}
 	
 	//##############################      TIPO DE JUGADOR      ###################################

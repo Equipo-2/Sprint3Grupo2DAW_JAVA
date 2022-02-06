@@ -14,7 +14,9 @@ public class AsignarEquipo {
       
       public void setJugador(Jugador jugador) {
 
-    	  
+    	  if (nombrevalido()!=null) {
+    		  
+    	  }
     	  
       }
       
