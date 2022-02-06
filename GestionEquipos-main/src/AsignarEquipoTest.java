@@ -57,6 +57,7 @@ class AsignarEquipoTest {
 		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
 		assertEquals(edadValida, jugadorGuardado.getEdad());
 		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
+		
 	}
 	
 	//Asignar jugador que exista, pero su nombre sea inválido
@@ -190,6 +191,27 @@ class AsignarEquipoTest {
 		assertEquals(edadValida, jugadorGuardado.getEdad());
 		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
 	}
+	@Test
+	void testJugadorNombreMayus() {
+		AsignarEquipo asignarEquipo = new AsignarEquipo();
+
+		Jugador jugador = new Jugador();
+		String nombrevalido = "Alejandro";
+		int edadValida = 20;
+		String idiomaValido = "Español";
+		jugador.setNombreJugador(nombrevalido);
+		jugador.setEdad(edadValida);
+		jugador.setIdioma(idiomaValido);
+		
+		asignarEquipo.setJugador(jugador);
+		
+		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
+		assertNotNull(jugadorGuardado);
+		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
+		assertEquals(edadValida, jugadorGuardado.getEdad());
+		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
+		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador().toUpperCase());
+	}
 	
 	/////////////////////////////////////////////////////////////////////////
 	
@@ -283,7 +305,7 @@ class AsignarEquipoTest {
 			assertEquals(nombre, equipoGuardado.getNombreEquipo());
 			assertEquals(ranking, equipoGuardado.getRanking());
 			assertNotNull(equipoGuardado);
-			assertEquals(nombre,equipoGuardado.getRanking(),nombre.toUpperCase());
+			assertEquals(nombre,equipoGuardado.getNombreEquipo().toUpperCase());
 		}
 
 }
