@@ -79,6 +79,15 @@ class EquipoTest {
 		equipo.setNombreEquipo(nombreEquipo);
 		assertEquals(null,equipo.getNombreEquipo());
 	}
+	@Test
+	void testSetMayusNombreEquipo(){
+		Equipo equipo = new Equipo();
+		String nombreEquipo = "Los osos";
+		equipo.setNombreEquipo(nombreEquipo);
+		assertEquals(nombreEquipo,equipo.getNombreEquipo());
+		assertEquals(nombreEquipo,equipo.getNombreEquipo().toUpperCase());
+	}
+	
 	
 //###################################      RANKING      ###################################
 	
