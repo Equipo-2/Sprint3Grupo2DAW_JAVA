@@ -31,23 +31,36 @@ public class Equipo {
 		}
 	}
 	
+	public void setCategoriaEquipo(String categoriaEquipo) {
+		switch (ranking) {
+		case 1:
+		case 2:
+			this.categoriaEquipo="categoria tercera";
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+			this.categoriaEquipo="categoria segunda";
+		case 7:
+		case 8:
+		case 9:
+		case 10:
+			this.categoriaEquipo="categoria primera";
+		default:
+			this.categoriaEquipo=null;
+		}	
+	}
+	
 	public String getNombreEquipo() {
 		return nombreEquipo;
 	}
 	public int getRanking() {
 		return ranking;
 	}
-
-
-	
 	public String getCategoriaEquipo() {
 		return categoriaEquipo;
 	}
 
-
-	public void setCategoriaEquipo(String categoriaEquipo) {
-		this.categoriaEquipo = categoriaEquipo;
-	}
 
 
 }
