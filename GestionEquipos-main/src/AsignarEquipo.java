@@ -14,8 +14,10 @@ public class AsignarEquipo {
       
       public void setJugador(Jugador jugador) {
 
-    	  if (nombrevalido()!=null) {
-    		  
+    	  if (jugador.getNombreJugador()!=null && jugador.getEdad()>18 && jugador.getEdad()<100 && jugador.getIdioma()!=null) {
+    		  this.jugador = jugador;
+    	  }else {
+    		  this.jugador = null;
     	  }
     	  
       }
