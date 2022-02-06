@@ -31,23 +31,20 @@ public class Equipo {
 		}
 	}
 	
+	public void setCategoriaEquipo(String categoriaEquipo) {
+		// Futuro código
+	}
+	
 	public String getNombreEquipo() {
 		return nombreEquipo;
 	}
 	public int getRanking() {
 		return ranking;
 	}
-
-
-	
 	public String getCategoriaEquipo() {
 		return categoriaEquipo;
 	}
 
-
-	public void setCategoriaEquipo(String categoriaEquipo) {
-		this.categoriaEquipo = categoriaEquipo;
-	}
 
 
 }
