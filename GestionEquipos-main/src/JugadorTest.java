@@ -47,7 +47,15 @@ class JugadorTest {
 		jugador.setNombreJugador(nombreJugador);
 		assertEquals(nombreJugador, jugador.getNombreJugador());
 	}
+	@Test
+	void testSetNombreJugadorMayus() {
+		Jugador jugador = new Jugador();
+		String nombreJugador = "Mortimer";
+		jugador.setNombreJugador(nombreJugador);
+		assertEquals(nombreJugador, jugador.getNombreJugador());
+		assertEquals(nombreJugador, jugador.getNombreJugador().toUpperCase());
 
+	}
 	//Guardar jugador con menos de 20 caracteres
 	@Test void testSetNombreJugadorValido2() {
 		Jugador jugador = new Jugador();
