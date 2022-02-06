@@ -270,5 +270,20 @@ class AsignarEquipoTest {
 			Equipo equipoGuardado = asignarEquipo.getEquipo();
 			assertNull(equipoGuardado);
 		}
+		@Test
+		void testGuardarNombreMayus() {
+			AsignarEquipo asignarEquipo = new AsignarEquipo();
+			Equipo equipo = new Equipo();
+			String nombre= "PraiseTheSun";
+			int ranking = 1;
+			equipo.setNombreEquipo(nombre);
+			equipo.setRanking(ranking);
+			asignarEquipo.setEquipo(equipo);
+			Equipo equipoGuardado = asignarEquipo.getEquipo();
+			assertEquals(nombre, equipoGuardado.getNombreEquipo());
+			assertEquals(ranking, equipoGuardado.getRanking());
+			assertNotNull(equipoGuardado);
+			assertEquals(nombre,equipoGuardado.getRanking(),nombre.toUpperCase());
+		}
 
 }
