@@ -48,7 +48,7 @@ public class Jugador {
 		
 	}
 	
-	public void setTipoJugador(String tipo) {
+	public void setTipoJugador(int edad) {
 		if (edad>=18 && edad<=25) {
 			this.tipo = "Junior";
 		}else if (edad>25 && edad<=35) {
