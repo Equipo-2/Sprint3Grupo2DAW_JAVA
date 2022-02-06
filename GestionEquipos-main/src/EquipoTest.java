@@ -132,101 +132,91 @@ class EquipoTest {
 	//Guardar equipo con categoria primera con ranking 10
 	@Test
 	void testSetCategoriaPrimera10 () {
-		Equipo equipo = new Equipo();
-		int ranking = 10;
-		String categoria="categoria primera";
-		equipo.setCategoriaEquipo(categoria);
-		assertEquals(categoria,equipo.getCategoriaEquipo());
+		Equipo equipo= new Equipo();
+		equipo.setNombreEquipo("Los Limones");
+		equipo.setRanking(10);
+		assertEquals("primera", equipo.getCategoriaEquipo());
 	}
 	
 	//Guardar equipo con categoria primera con ranking entre 7 y 10 (8)
 	@Test
 	void testSetCategoriaPrimera8 () {
 		Equipo equipo = new Equipo();
-		int ranking = 8;
-		String categoria="categoria primera";
-		equipo.setCategoriaEquipo(categoria);
-		assertEquals(categoria,equipo.getCategoriaEquipo());
+		equipo.setNombreEquipo("Los Limones");
+		equipo.setRanking(8);
+		assertEquals("primera", equipo.getCategoriaEquipo());
 	}
 	
 	//Guardar equipo con categoria primera con ranking 7
 	@Test
 	void testSetCategoriaPrimera7 () {
 		Equipo equipo = new Equipo();
-		int ranking = 7;
-		String categoria="categoria primera";
-		equipo.setCategoriaEquipo(categoria);
-		assertEquals(categoria,equipo.getCategoriaEquipo());
+		equipo.setNombreEquipo("Los Limones");
+		equipo.setRanking(7);
+		assertEquals("primera", equipo.getCategoriaEquipo());
 	}
 	
 	//Guardar equipo con categoria segunda con ranking 6
 	@Test
 	void testSetCategoriaSegunda6 () {
 		Equipo equipo = new Equipo();
-		int ranking = 6;
-		String categoria="categoria segunda";
-		equipo.setCategoriaEquipo(categoria);
-		assertEquals(categoria,equipo.getCategoriaEquipo());
+		equipo.setNombreEquipo("Los Limones");
+		equipo.setRanking(6);
+		assertEquals("segunda", equipo.getCategoriaEquipo());
 	}
 	
 	//Guardar equipo con categoria segunda con ranking entre 3 y 6 (4)
 	@Test
 	void testSetCategoriaSegunda4 () {
 		Equipo equipo = new Equipo();
-		int ranking = 4;
-		String categoria="categoria segunda";
-		equipo.setCategoriaEquipo(categoria);
-		assertEquals(categoria,equipo.getCategoriaEquipo());
+		equipo.setNombreEquipo("Los Limones");
+		equipo.setRanking(4);
+		assertEquals("segunda", equipo.getCategoriaEquipo());
 	}
 	
 	//Guardar equipo con categoria segunda con ranking 3
 	@Test
 	void testSetCategoriaSegunda3 () {
 		Equipo equipo = new Equipo();
-		int ranking = 3;
-		String categoria="categoria segunda";
-		equipo.setCategoriaEquipo(categoria);
-		assertEquals(categoria,equipo.getCategoriaEquipo());
+		equipo.setNombreEquipo("Los Limones");
+		equipo.setRanking(3);
+		assertEquals("segunda", equipo.getCategoriaEquipo());
 	}
 	
 	//Guardar equipo con categoria tercera con ranking 2
 	@Test
 	void testSetCategoriaTercera2 () {
 		Equipo equipo = new Equipo();
-		int ranking = 2;
-		String categoria="categoria tercera";
-		equipo.setCategoriaEquipo(categoria);
-		assertEquals(categoria,equipo.getCategoriaEquipo());
+		equipo.setNombreEquipo("Los Limones");
+		equipo.setRanking(2);
+		assertEquals("tercera", equipo.getCategoriaEquipo());
 	}
 	
 	//Guardar equipo con categoria tercera con ranking 1
 	@Test
 	void testSetCategoriaTercera1 () {
 		Equipo equipo = new Equipo();
-		int ranking = 1;
-		String categoria="categoria tercera";
-		equipo.setCategoriaEquipo(categoria);
-		assertEquals(categoria,equipo.getCategoriaEquipo());
+		equipo.setNombreEquipo("Los Limones");
+		equipo.setRanking(1);
+		assertEquals("tercera", equipo.getCategoriaEquipo());
 	}
 	
 	//Guardar equipo con categoria superior a 10
 	@Test
 	void testSetCategoriaInvalidaMaxima () {
 		Equipo equipo = new Equipo();
-		int ranking = 11;
-		String categoria="";
-		equipo.setCategoriaEquipo(categoria);
-		assertEquals(null,equipo.getCategoriaEquipo());
+		equipo.setNombreEquipo("Los Limones");
+		equipo.setRanking(11);
+		assertEquals(null, equipo.getCategoriaEquipo());
 	}
 	
 	//Guardar equipo con categoria superior a 10
 	@Test
 	void testSetCategoriaInvalidaMinima () {
 		Equipo equipo = new Equipo();
-		int ranking = -1;
-		String categoria="";
-		equipo.setCategoriaEquipo(categoria);
-		assertEquals(null,equipo.getCategoriaEquipo());
+		equipo.setNombreEquipo("Los Limones");
+		equipo.setRanking(-1);
+		assertEquals(null, equipo.getCategoriaEquipo());
 	}
 	
 }

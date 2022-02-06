@@ -30,7 +30,6 @@ public class Equipo {
 			this.ranking=ranking;
 		}
 	}
-	
 	public void setCategoriaEquipo(String categoriaEquipo) {
 		switch (ranking) {
 		case 1:
