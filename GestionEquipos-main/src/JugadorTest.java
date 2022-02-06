@@ -123,61 +123,61 @@ class JugadorTest {
 	
 	//##############################      IDIOMA      ###################################
 	
-//	//Guardar idioma nulo
-//	@Test void testSetIdiomaJugadorNull() {
-//		Jugador jugador = new Jugador();
-//		String idiomaValido = "";
-//		jugador.setIdioma(idiomaValido);
-//		assertEquals(idiomaValido, jugador.getIdioma());
-//	}
-//	
-//	//Guardar idioma correcto
-//	@Test void testSetIdiomaJugadorCorrecto1() {
-//		Jugador jugador = new Jugador();
-//		String idiomaValido = "Español";
-//		jugador.setIdioma(idiomaValido);
-//		assertEquals(idiomaValido, jugador.getIdioma());
-//	}
-//	
-//	//Guardar idioma correcto
-//	@Test void testSetIdiomaJugadorCorrecto2() {
-//		Jugador jugador = new Jugador();
-//		String idiomaValido = "Inglés";
-//		jugador.setIdioma(idiomaValido);
-//		assertEquals(idiomaValido, jugador.getIdioma());
-//	}
-//	
-//	//Guardar idioma correcto
-//	@Test void testSetIdiomaJugadorCorrecto3() {
-//		Jugador jugador = new Jugador();
-//		String idiomaValido = "Francés";
-//		jugador.setIdioma(idiomaValido);
-//		assertEquals(idiomaValido, jugador.getIdioma());
-//	}
-//	
-//	//Guardar idioma correcto
-//	@Test void testSetIdiomaJugadorCorrecto4() {
-//		Jugador jugador = new Jugador();
-//		String idiomaValido = "Alemán";
-//		jugador.setIdioma(idiomaValido);
-//		assertEquals(idiomaValido, jugador.getIdioma());
-//	}
-//	
-//	//Guardar idioma incorrecto
-//	@Test void testSetIdiomaJugadorIncorrecto() {
-//		Jugador jugador = new Jugador();
-//		String idiomaValido = "Japonés";
-//		jugador.setIdioma(idiomaValido);
-//		assertEquals(idiomaValido, jugador.getIdioma());
-//	}
-//	
-//	//Guardar idioma valor no aceptado
-//	@Test void testSetIdiomaJugadorNoAceptado() {
-//		Jugador jugador = new Jugador();
-//		String idiomaValido = "5";
-//		jugador.setIdioma(idiomaValido);
-//		assertEquals(idiomaValido, jugador.getIdioma());
-//	}
+	//Guardar idioma nulo
+	@Test void testSetIdiomaJugadorNull() {
+		Jugador jugador = new Jugador();
+		String idiomaValido = "";
+		jugador.setIdioma(idiomaValido);
+		assertEquals(idiomaValido, jugador.getIdioma());
+	}
+	
+	//Guardar idioma correcto
+	@Test void testSetIdiomaJugadorCorrecto1() {
+		Jugador jugador = new Jugador();
+		String idiomaValido = "Español";
+		jugador.setIdioma(idiomaValido);
+		assertEquals(idiomaValido, jugador.getIdioma());
+	}
+	
+	//Guardar idioma correcto
+	@Test void testSetIdiomaJugadorCorrecto2() {
+		Jugador jugador = new Jugador();
+		String idiomaValido = "Inglés";
+		jugador.setIdioma(idiomaValido);
+		assertEquals(idiomaValido, jugador.getIdioma());
+	}
+	
+	//Guardar idioma correcto
+	@Test void testSetIdiomaJugadorCorrecto3() {
+		Jugador jugador = new Jugador();
+		String idiomaValido = "Francés";
+		jugador.setIdioma(idiomaValido);
+		assertEquals(idiomaValido, jugador.getIdioma());
+	}
+	
+	//Guardar idioma correcto
+	@Test void testSetIdiomaJugadorCorrecto4() {
+		Jugador jugador = new Jugador();
+		String idiomaValido = "Alemán";
+		jugador.setIdioma(idiomaValido);
+		assertEquals(idiomaValido, jugador.getIdioma());
+	}
+	
+	//Guardar idioma incorrecto
+	@Test void testSetIdiomaJugadorIncorrecto() {
+		Jugador jugador = new Jugador();
+		String idiomaValido = "Japonés";
+		jugador.setIdioma(idiomaValido);
+		assertEquals(idiomaValido, jugador.getIdioma());
+	}
+	
+	//Guardar idioma valor no aceptado
+	@Test void testSetIdiomaJugadorNoAceptado() {
+		Jugador jugador = new Jugador();
+		String idiomaValido = "5";
+		jugador.setIdioma(idiomaValido);
+		assertEquals(idiomaValido, jugador.getIdioma());
+	}
 	
 	//##############################      TIPO DE JUGADOR      ###################################
 

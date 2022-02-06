@@ -13,7 +13,9 @@ public class AsignarEquipo {
       }
       
       public void setJugador(Jugador jugador) {
-  		//code here
+
+    	  
+    	  
       }
       
       public Equipo getEquipo(){

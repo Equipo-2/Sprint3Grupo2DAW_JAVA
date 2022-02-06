@@ -32,7 +32,19 @@ public class Jugador {
 	}
 
 	public void setIdioma(String idioma) {
-		//code here
+		
+		if (idioma.equals("español")) {
+			this.idioma = "Español";
+		}else if (idioma.equals("inglés")) {
+			this.idioma = "Inglés";
+		}else if (idioma.equals("francés")) {
+			this.idioma = "Francés";
+		}else if (idioma.equals("alemán")) {
+			this.idioma = "Alemán";
+		}else {
+			this.idioma = null;
+		}
+		
 	}
 
 	
@@ -48,7 +60,7 @@ public class Jugador {
 	}
 
 	public String tipoJugador(int edad) {
-		//code here
+		return null;
 	}
 
 }
