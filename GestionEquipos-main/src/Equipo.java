@@ -51,7 +51,7 @@ public class Equipo {
 	}
 	
 	public String getNombreEquipo() {
-		return nombreEquipo;
+		return nombreEquipo.toUpperCase();
 	}
 	public int getRanking() {
 		return ranking;
