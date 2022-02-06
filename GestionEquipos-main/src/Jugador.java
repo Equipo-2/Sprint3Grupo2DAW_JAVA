@@ -3,9 +3,10 @@ public class Jugador {
 	private String nombre;
 	private String idioma;
 	private int edad;
+	private String tipo;
 	
 	public Jugador () {
-			
+
 		}
 
 	public void setNombreJugador(String nombre) {
@@ -46,6 +47,20 @@ public class Jugador {
 		}
 		
 	}
+	
+	public void setTipoJugador(String tipo) {
+		if (edad>=18 && edad<=25) {
+			this.tipo = "Junior";
+		}else if (edad>25 && edad<=35) {
+			this.tipo = "Senior";
+		}else if (edad>35 && edad<=99) {
+			this.tipo = "Master";
+		}else if (edad<=100) {
+			this.tipo = "SuperMaster";
+		}else {
+			this.tipo = null;
+		}
+	}
 
 	
 	public String getNombreJugador() {
@@ -59,8 +74,8 @@ public class Jugador {
 		return idioma;
 	}
 
-	public String tipoJugador(int edad) {
-		return null;
+	public String getTipoJugador() {
+		return tipo;
 	}
 
 }

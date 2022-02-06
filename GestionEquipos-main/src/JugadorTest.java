@@ -188,7 +188,7 @@ class JugadorTest {
 		int edad = 17;
 		String tipo = "";
 		jugador.setTipoJugador(tipo);
-		assertEquals(null, jugador.getTipoJugador(tipo));
+		assertEquals(null, jugador.getTipoJugador());
 	}
 	
 	//Guardar tipo de jugador con 18
@@ -198,7 +198,7 @@ class JugadorTest {
 		int edad = 18;
 		String tipo = "Junior";
 		jugador.setTipoJugador(tipo);
-		assertEquals(tipo, jugador.getTipoJugador(tipo));
+		assertEquals(edad, jugador.getTipoJugador());
 	}
 	
 	//Guardar tipo de jugador con 25
@@ -208,7 +208,7 @@ class JugadorTest {
 		int edad = 25;
 		String tipo = "Junior";
 		jugador.setTipoJugador(tipo);
-		assertEquals(tipo, jugador.getTipoJugador(tipo));
+		assertEquals(edad, jugador.getTipoJugador());
 	}
 	
 	//Guardar tipo de jugador con 26
@@ -218,7 +218,7 @@ class JugadorTest {
 		int edad = 26;
 		String tipo = "Senior";
 		jugador.setTipoJugador(tipo);
-		assertEquals(tipo, jugador.getTipoJugador(tipo));
+		assertEquals(edad, jugador.getTipoJugador());
 	}
 	
 	//Guardar tipo de jugador con 35
@@ -228,7 +228,7 @@ class JugadorTest {
 		int edad = 35;
 		String tipo = "Senior";
 		jugador.setTipoJugador(tipo);
-		assertEquals(tipo, jugador.getTipoJugador(tipo));
+		assertEquals(edad, jugador.getTipoJugador());
 	}
 	
 	//Guardar tipo de jugador con 36
@@ -238,7 +238,7 @@ class JugadorTest {
 		int edad = 36;
 		String tipo = "Master";
 		jugador.setTipoJugador(tipo);
-		assertEquals(tipo, jugador.getTipoJugador(tipo));
+		assertEquals(edad, jugador.getTipoJugador());
 	}
 	
 	//Guardar tipo de jugador con 99
@@ -248,7 +248,7 @@ class JugadorTest {
 		int edad = 99;
 		String tipo = "Master";
 		jugador.setTipoJugador(tipo);
-		assertEquals(tipo, jugador.getTipoJugador(tipo));
+		assertEquals(edad, jugador.getTipoJugador());
 	}
 	
 	//Guardar tipo de jugador con 100
@@ -258,7 +258,7 @@ class JugadorTest {
 		int edad = 100;
 		String tipo = "SuperMaster";
 		jugador.setTipoJugador(tipo);
-		assertEquals(tipo, jugador.getTipoJugador(tipo));
+		assertEquals(edad, jugador.getTipoJugador());
 	}
 
 }
