@@ -52,8 +52,8 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Mortimer";
 		jugador.setNombreJugador(nombreJugador);
-		assertEquals(nombreJugador, jugador.getNombreJugador());
-		assertEquals(nombreJugador, jugador.getNombreJugador().toUpperCase());
+		assertEquals(nombreJugador.toUpperCase(), jugador.getNombreJugador());
+		
 
 	}
 	//Guardar jugador con menos de 20 caracteres
