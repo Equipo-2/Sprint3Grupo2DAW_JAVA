@@ -15,7 +15,7 @@ public class Equipo {
 		for (int i=0;i<nombreEquipo2.length() && letra;i++) {
 			if ((nombreEquipo2.charAt(i)>=('a') && nombreEquipo2.charAt(i)<=('z') || nombreEquipo2.charAt(i)==(' ')) &&
 				nombreEquipo2.length()>=5 && nombreEquipo2.length()<=20) {
-				this.nombreEquipo=nombreEquipo;
+				this.nombreEquipo=nombreEquipo.toUpperCase();
 				letra=true;
 			}else {
 				this.nombreEquipo=null;
@@ -51,7 +51,7 @@ public class Equipo {
 	}
 	
 	public String getNombreEquipo() {
-		return nombreEquipo.toUpperCase();
+		return nombreEquipo;
 	}
 	public int getRanking() {
 		return ranking;

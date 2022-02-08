@@ -64,7 +64,7 @@ public class Jugador {
 
 	
 	public String getNombreJugador() {
-		return nombre.toUpperCase();
+		return nombre;
 	}
 	public int getEdad() {
 		return edad;
