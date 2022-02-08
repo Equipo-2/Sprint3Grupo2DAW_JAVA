@@ -60,6 +60,19 @@ public class Jugador {
 
 	public String tipoJugador() {
 
+		if (nombre != null && edad != -1 && idioma != null) {
+			if (edad<=17) {
+				return null;
+			}else if (edad>=18 && edad<=25) {
+				return "Junior";
+			}else if (edad>=26 && edad<=35) {
+				return "Senior";
+			}else if (edad>=36 && edad<=100) {
+				return "Master";
+			}return "SuperMaster";
+		}else {
+			return null;
+		}
 	}
 
 }
