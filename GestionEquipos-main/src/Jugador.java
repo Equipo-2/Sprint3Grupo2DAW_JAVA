@@ -3,7 +3,6 @@ public class Jugador {
 	private String nombre;
 	private String idioma;
 	private int edad;
-	private String tipo;
 	
 	public Jugador () {
 
@@ -11,21 +10,21 @@ public class Jugador {
 
 	public void setNombreJugador(String nombre) {
 
-		if(nombre != null) {
-		    if (nombre.length()>=4 && nombre.length()<=20) {
-			if (nombre.matches("[a-zA-Z]+")) {
-			    this.nombre=nombre.toUpperCase();
-			}
-		    }
-		}else{
-		    this.nombre= null;
-		}
+        if(nombre != null) {
+            if (nombre.length()>=4 && nombre.length()<=20) {
+                if (nombre.matches("[a-zA-Z]+") || nombre.contains(" ")) {
+                    this.nombre=nombre.toUpperCase();
+                }
+            }
+        }else{
+            this.nombre= null;
+        }
         
 	}
 
 	public void setEdad(int edad) {
 		
-		if (edad<18 || edad>100) {
+		if (edad<18 || edad>200) {
 			this.edad = -1;
 		}else {
 			this.edad = edad;
@@ -47,22 +46,7 @@ public class Jugador {
 		}
 		
 	}
-	
-	public void setTipoJugador(int edad) {
-		if (edad>=18 && edad<=25) {
-			this.tipo = "Junior";
-		}else if (edad>25 && edad<=35) {
-			this.tipo = "Senior";
-		}else if (edad>35 && edad<=99) {
-			this.tipo = "Master";
-		}else if (edad>=100) {
-			this.tipo = "SuperMaster";
-		}else {
-			this.tipo = null;
-		}
-	}
 
-	
 	public String getNombreJugador() {
 		return nombre;
 	}
@@ -74,8 +58,8 @@ public class Jugador {
 		return idioma;
 	}
 
-	public String getTipoJugador() {
-		return tipo;
+	public String tipoJugador() {
+
 	}
 
 }
