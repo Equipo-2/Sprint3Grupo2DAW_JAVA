@@ -11,7 +11,6 @@ import org.junit.jupiter.api.Test;
  * @Test unitarios para los métodos de la clase Jugador
  *
  */
-
 class JugadorTest {
 	
 //###################################      NOMBRE      ###################################
