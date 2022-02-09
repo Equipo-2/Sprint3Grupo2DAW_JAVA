@@ -20,7 +20,6 @@ class EquipoTest {
 	@Test void testSetNombreEquipoInvalidoVacio() {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "";
-		nombreEquipo.toUpperCase();
 		equipo.setNombreEquipo(nombreEquipo);
 		assertEquals(null,equipo.getNombreEquipo());
 	}

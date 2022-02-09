@@ -6,7 +6,9 @@ public class Equipo {
 
 	
 	public void setNombreEquipo(String nombreEquipo) {
-		if (nombreEquipo!=null) {
+		if (nombreEquipo==null) {
+			this.nombreEquipo=null;
+		}else {
 			boolean letra=true;
 			nombreEquipo.toUpperCase();
 			
@@ -20,10 +22,7 @@ public class Equipo {
 					letra=false;
 				}
 			}
-		}else {
-			this.nombreEquipo=null;
 		}
-
 	}
 	public void setRanking(int ranking) {
 		if (ranking<0 || ranking>10) {
@@ -33,7 +32,9 @@ public class Equipo {
 		}
 	}
 	public String categoriaEquipo() {
-		if (nombreEquipo!=null && ranking!=-1) {
+		if (nombreEquipo==null && ranking==-1) {
+			return categoriaEquipo=null;
+		}else {
 			switch (ranking) {
 			case 1:
 			case 2:
@@ -51,10 +52,7 @@ public class Equipo {
 			default:
 				return categoriaEquipo=null;
 			}	
-		}else {
-			return categoriaEquipo=null;
 		}
-
 	}
 	
 	public String getNombreEquipo() {
