@@ -223,8 +223,8 @@ class AsignarEquipoTest {
 			Equipo equipo = new Equipo();
 			String nombre= "PraiseTheSun";
 			int ranking = 1;
-			equipo.setNombreEquipo(nombre);
-			equipo.setRanking(ranking);
+			equipo.NombreEquipo(nombre);
+			equipo.Ranking(ranking);
 			asignarEquipo.setEquipo(equipo);
 			Equipo equipoGuardado = asignarEquipo.getEquipo();
 			assertEquals(nombre, equipoGuardado.getNombreEquipo());
@@ -248,7 +248,7 @@ class AsignarEquipoTest {
 			AsignarEquipo asignarEquipo = new AsignarEquipo();
 			Equipo equipo = new Equipo();
 			String nombre = "Sol";
-			equipo.setNombreEquipo(nombre);
+			equipo.NombreEquipo(nombre);
 			asignarEquipo.setEquipo(equipo);
 			Equipo equipoGuardado = asignarEquipo.getEquipo();
 			assertNull(equipoGuardado);
@@ -260,7 +260,7 @@ class AsignarEquipoTest {
 			AsignarEquipo asignarEquipo = new AsignarEquipo();
 			Equipo equipo = new Equipo();
 			String nombre = null;
-			equipo.setNombreEquipo(nombre);
+			equipo.NombreEquipo(nombre);
 			asignarEquipo.setEquipo(equipo);
 			Equipo equipoGuardado = asignarEquipo.getEquipo();
 			assertNull(equipoGuardado);
@@ -273,8 +273,8 @@ class AsignarEquipoTest {
 			Equipo equipo = new Equipo();
 			String nombre = "Tzedakah";
 			int ranking= -1;
-			equipo.setRanking(ranking);
-			equipo.setNombreEquipo(nombre);
+			equipo.Ranking(ranking);
+			equipo.NombreEquipo(nombre);
 			asignarEquipo.setEquipo(equipo);
 			Equipo equipoGuardado = asignarEquipo.getEquipo();
 			assertNull(equipoGuardado);
@@ -287,7 +287,7 @@ class AsignarEquipoTest {
 			AsignarEquipo asignarEquipo = new AsignarEquipo();
 			Equipo equipo = new Equipo();
 			String nombre = "Overgeared";
-			equipo.setNombreEquipo(nombre);
+			equipo.NombreEquipo(nombre);
 			asignarEquipo.setEquipo(equipo);
 			Equipo equipoGuardado = asignarEquipo.getEquipo();
 			assertNull(equipoGuardado);
@@ -298,8 +298,8 @@ class AsignarEquipoTest {
 			Equipo equipo = new Equipo();
 			String nombre= "PraiseTheSun";
 			int ranking = 1;
-			equipo.setNombreEquipo(nombre);
-			equipo.setRanking(ranking);
+			equipo.NombreEquipo(nombre);
+			equipo.Ranking(ranking);
 			asignarEquipo.setEquipo(equipo);
 			Equipo equipoGuardado = asignarEquipo.getEquipo();
 			assertEquals(nombre, equipoGuardado.getNombreEquipo());
