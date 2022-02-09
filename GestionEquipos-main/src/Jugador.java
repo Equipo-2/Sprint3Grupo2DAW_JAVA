@@ -12,7 +12,7 @@ public class Jugador {
 			
 		}
 
-	/**
+       /**
 	* Método para crear el nombre del jugador
 	* @param nombreMinimoCaracteres - El número mínimo de caracteres necesarios ->
 	* -> para que el nombre sea válido
@@ -37,7 +37,7 @@ public class Jugador {
         
 	}
 
- 	/**
+       /**
   	* Método para crear la edad del jugador
    	* @param edadNula - La edad dada no es válida, se interpreta como '-1'
    	* @param edadMinima - La edad mímina necesaria para aceptar al jugador
@@ -58,7 +58,7 @@ public class Jugador {
 	}
 
 
-   	/**
+       /**
    	* Método para crear el idioma del jugador
    	* El castellano, inglés, francés y alemán son los idiomas aceptados
    	* Otros idiomas serán considerados como null (no válidos)
@@ -80,7 +80,7 @@ public class Jugador {
 
 	}
 
-  	/**
+       /**
    	* @return 'String'
 	*
     	*/
@@ -88,7 +88,7 @@ public class Jugador {
 		return idioma;
 	}
 	
-  	/**
+       /**
    	* @return 'String'
 	*
     	*/
@@ -96,7 +96,7 @@ public class Jugador {
 		return nombre;
 	}
 
-  	/**
+       /**
    	* @return 'int'
 	*
     	*/
@@ -104,7 +104,7 @@ public class Jugador {
 		return edad;
 	}
 
-	/**
+       /**
 	* Método para crear el tipo de jugador
 	* @return 'String'
 	* @param edadNula - La edad dada no es válida, se interpreta como '-1'
