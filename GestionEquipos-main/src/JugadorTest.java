@@ -1,17 +1,17 @@
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
 /**
- * 
- */
-
-/**
  * @author Ale Cabrera
  *
  */
+
+/**
+ * @Test unitarios para los métodos de la clase Jugador
+ *
+ */
+
 class JugadorTest {
 	
 //###################################      NOMBRE      ###################################
