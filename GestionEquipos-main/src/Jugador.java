@@ -10,15 +10,15 @@ public class Jugador {
 
 	public void setNombreJugador(String nombre) {
 
-        if(nombre != null) {
-            if (nombre.length()>=4 && nombre.length()<=20) {
-                if (nombre.matches("[a-zA-Z]+") || nombre.contains(" ")) {
-                    this.nombre=nombre.toUpperCase();
-                }
-            }
-        }else{
-            this.nombre= null;
-        }
+		if(nombre != null) {
+		    if (nombre.length()>=4 && nombre.length()<=20) {
+			if (nombre.matches("[a-zA-Z]+") || nombre.contains(" ")) {
+			    this.nombre=nombre.toUpperCase();
+			}
+		    }
+		}else{
+		    this.nombre= null;
+		}
         
 	}
 
