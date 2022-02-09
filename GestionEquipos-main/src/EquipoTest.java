@@ -20,74 +20,73 @@ class EquipoTest {
 	@Test void testSetNombreEquipoInvalidoVacio() {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "";
+		nombreEquipo.toUpperCase();
 		equipo.setNombreEquipo(nombreEquipo);
-		assertEquals(null,equipo.getNombreEquipo().toUpperCase());
+		assertEquals(null,equipo.getNombreEquipo());
 	}
 
 	//Guardar equipo con menos de 4 caracteres
 	@Test void testSetNombreEquipoInvalidoMinimoCaracteres() {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "Sol";
+		nombreEquipo.toUpperCase();
 		equipo.setNombreEquipo(nombreEquipo);
-		assertEquals(null,equipo.getNombreEquipo().toUpperCase());
+		assertEquals(null,equipo.getNombreEquipo());
 	}
 
 	//Guardar equipo con 5 caracteres
 	@Test void testSetNombreEquipoValidoMinimoCaracteres() {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "Prais";
+		nombreEquipo.toUpperCase();
 		equipo.setNombreEquipo(nombreEquipo);
-		assertEquals(nombreEquipo,equipo.getNombreEquipo().toUpperCase());
+		assertEquals(nombreEquipo,equipo.getNombreEquipo());
 	}
 
 	//Guardar equipo con más de 5 caracteres
 	@Test void testSetNombreEquipoValido() {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "Los osos";
+		nombreEquipo.toUpperCase();
 		equipo.setNombreEquipo(nombreEquipo);
-		assertEquals(nombreEquipo,equipo.getNombreEquipo().toUpperCase());
+		assertEquals(nombreEquipo,equipo.getNombreEquipo());
 	}
 
 	//Guardar equipo con menos de 20 caracteres
 	@Test void testSetNombreEquipoValido2() {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "PraiseTheSun";
+		nombreEquipo.toUpperCase();
 		equipo.setNombreEquipo(nombreEquipo);
-		assertEquals(nombreEquipo,equipo.getNombreEquipo().toUpperCase());
+		assertEquals(nombreEquipo,equipo.getNombreEquipo());
 	}
 
 	//Guardar equipo con 20 caracteres
 	@Test void testSetNombreEquipoValidoMaximoCaracteres() {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "File Anan Rizably Se";
+		nombreEquipo.toUpperCase();
 		equipo.setNombreEquipo(nombreEquipo);
-		assertEquals(nombreEquipo,equipo.getNombreEquipo().toUpperCase());
+		assertEquals(nombreEquipo,equipo.getNombreEquipo());
 	}
 
 	//Guardar equipo con más de 20 caracteres
 	@Test void testSetNombreEquipoInvalidoMaximoCaracteres() {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "Supercalifragilisticoespialidoso";
+		nombreEquipo.toUpperCase();
 		equipo.setNombreEquipo(nombreEquipo);
-		assertEquals(null,equipo.getNombreEquipo().toUpperCase());
+		assertEquals(null,equipo.getNombreEquipo());
 	}
 	
 	//Guardar equipo con caracteres invalidos
 	@Test void testSetNombreEquipoInvalidoCaracteresInvalidos() {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "Los Limones_01";
+		nombreEquipo.toUpperCase();
 		equipo.setNombreEquipo(nombreEquipo);
-		assertEquals(null,equipo.getNombreEquipo().toUpperCase());
+		assertEquals(null,equipo.getNombreEquipo());
 	}
-	@Test
-	void testSetMayusNombreEquipo(){
-		Equipo equipo = new Equipo();
-		String nombreEquipo = "Los osos";
-		equipo.setNombreEquipo(nombreEquipo);
-		assertEquals(nombreEquipo,equipo.getNombreEquipo().toUpperCase());
-		
-	}
-	
 	
 //###################################      RANKING      ###################################
 	
