@@ -32,7 +32,7 @@ class AsignarEquipoTest {
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNotNull(jugadorGuardado);
-		assertEquals(null, jugadorGuardado.getNombreJugador());
+		assertEquals(null, jugadorGuardado.getNombreJugador().toUpperCase());
 		assertEquals(-1, jugadorGuardado.getEdad());
 		assertEquals(null, jugadorGuardado.getIdioma());
 	}
@@ -54,7 +54,7 @@ class AsignarEquipoTest {
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNotNull(jugadorGuardado);
-		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
+		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador().toUpperCase());
 		assertEquals(edadValida, jugadorGuardado.getEdad());
 		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
 		
@@ -77,7 +77,7 @@ class AsignarEquipoTest {
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNotNull(jugadorGuardado);
-		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
+		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador().toUpperCase());
 		assertEquals(edadValida, jugadorGuardado.getEdad());
 		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
 	}
@@ -99,7 +99,7 @@ class AsignarEquipoTest {
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNotNull(jugadorGuardado);
-		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
+		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador().toUpperCase());
 		assertEquals(edadValida, jugadorGuardado.getEdad());
 		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
 	}
@@ -121,7 +121,7 @@ class AsignarEquipoTest {
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNotNull(jugadorGuardado);
-		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
+		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador().toUpperCase());
 		assertEquals(edadValida, jugadorGuardado.getEdad());
 		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
 	}
@@ -143,7 +143,7 @@ class AsignarEquipoTest {
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNotNull(jugadorGuardado);
-		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
+		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador().toUpperCase());
 		assertNull(jugadorGuardado.getEdad());
 		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
 	}
@@ -165,7 +165,7 @@ class AsignarEquipoTest {
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNotNull(jugadorGuardado);
-		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
+		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador().toUpperCase());
 		assertEquals(edadValida, jugadorGuardado.getEdad());
 		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
 	}
@@ -187,7 +187,7 @@ class AsignarEquipoTest {
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNotNull(jugadorGuardado);
-		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
+		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador().toUpperCase());
 		assertEquals(edadValida, jugadorGuardado.getEdad());
 		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
 	}
@@ -207,10 +207,10 @@ class AsignarEquipoTest {
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNotNull(jugadorGuardado);
-		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
+		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador().toUpperCase());
 		assertEquals(edadValida, jugadorGuardado.getEdad());
 		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
-		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador().toUpperCase());
+	
 	}
 	
 	/////////////////////////////////////////////////////////////////////////
@@ -227,7 +227,7 @@ class AsignarEquipoTest {
 			equipo.Ranking(ranking);
 			asignarEquipo.setEquipo(equipo);
 			Equipo equipoGuardado = asignarEquipo.getEquipo();
-			assertEquals(nombre, equipoGuardado.getNombreEquipo());
+			assertEquals(nombre, equipoGuardado.getNombreEquipo().toUpperCase());
 			assertEquals(ranking, equipoGuardado.getRanking());
 			assertNotNull(equipoGuardado);
 		}
@@ -302,10 +302,10 @@ class AsignarEquipoTest {
 			equipo.Ranking(ranking);
 			asignarEquipo.setEquipo(equipo);
 			Equipo equipoGuardado = asignarEquipo.getEquipo();
-			assertEquals(nombre, equipoGuardado.getNombreEquipo());
+			assertEquals(nombre, equipoGuardado.getNombreEquipo().toUpperCase());
 			assertEquals(ranking, equipoGuardado.getRanking());
 			assertNotNull(equipoGuardado);
-			assertEquals(nombre,equipoGuardado.getNombreEquipo().toUpperCase());
+			
 		}
 
 }
