@@ -22,6 +22,7 @@ class AsignarEquipoTest {
 
 		Jugador jugador = new Jugador();
 		String nombrevalido = null;
+		nombrevalido.toUpperCase();
 		int edadValida = -1;
 		String idiomaValido = null;
 		jugador.setNombreJugador(nombrevalido);
@@ -32,7 +33,7 @@ class AsignarEquipoTest {
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNotNull(jugadorGuardado);
-		assertEquals(null, jugadorGuardado.getNombreJugador().toUpperCase());
+		assertEquals(null, jugadorGuardado.getNombreJugador());
 		assertEquals(-1, jugadorGuardado.getEdad());
 		assertEquals(null, jugadorGuardado.getIdioma());
 	}
@@ -44,6 +45,7 @@ class AsignarEquipoTest {
 
 		Jugador jugador = new Jugador();
 		String nombrevalido = "Alejandro";
+		nombrevalido.toUpperCase();
 		int edadValida = 20;
 		String idiomaValido = "castellano";
 		jugador.setNombreJugador(nombrevalido);
@@ -54,7 +56,7 @@ class AsignarEquipoTest {
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNotNull(jugadorGuardado);
-		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador().toUpperCase());
+		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
 		assertEquals(edadValida, jugadorGuardado.getEdad());
 		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
 		
@@ -67,6 +69,7 @@ class AsignarEquipoTest {
 
 		Jugador jugador = new Jugador();
 		String nombrevalido = "Eva";
+		nombrevalido.toUpperCase();
 		int edadValida = 20;
 		String idiomaValido = "castellano";
 		jugador.setNombreJugador(nombrevalido);
@@ -77,7 +80,7 @@ class AsignarEquipoTest {
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNotNull(jugadorGuardado);
-		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador().toUpperCase());
+		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
 		assertEquals(edadValida, jugadorGuardado.getEdad());
 		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
 	}
@@ -89,6 +92,7 @@ class AsignarEquipoTest {
 
 		Jugador jugador = new Jugador();
 		String nombrevalido = "";
+		nombrevalido.toUpperCase();
 		int edadValida = 20;
 		String idiomaValido = "castellano";
 		jugador.setNombreJugador(nombrevalido);
@@ -99,7 +103,7 @@ class AsignarEquipoTest {
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNotNull(jugadorGuardado);
-		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador().toUpperCase());
+		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
 		assertEquals(edadValida, jugadorGuardado.getEdad());
 		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
 	}
@@ -111,6 +115,7 @@ class AsignarEquipoTest {
 
 		Jugador jugador = new Jugador();
 		String nombrevalido = "Alejandro";
+		nombrevalido.toUpperCase();
 		int edadValida = 0;
 		String idiomaValido = "castellano";
 		jugador.setNombreJugador(nombrevalido);
@@ -121,7 +126,7 @@ class AsignarEquipoTest {
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNotNull(jugadorGuardado);
-		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador().toUpperCase());
+		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
 		assertEquals(edadValida, jugadorGuardado.getEdad());
 		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
 	}
@@ -133,6 +138,7 @@ class AsignarEquipoTest {
 
 		Jugador jugador = new Jugador();
 		String nombrevalido = "Alejandro";
+		nombrevalido.toUpperCase();
 		
 		String idiomaValido = "castellano";
 		jugador.setNombreJugador(nombrevalido);
@@ -143,7 +149,7 @@ class AsignarEquipoTest {
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNotNull(jugadorGuardado);
-		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador().toUpperCase());
+		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
 		assertNull(jugadorGuardado.getEdad());
 		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
 	}
@@ -155,6 +161,7 @@ class AsignarEquipoTest {
 
 		Jugador jugador = new Jugador();
 		String nombrevalido = "Alejandro";
+		nombrevalido.toUpperCase();
 		int edadValida = 20;
 		String idiomaValido = "arabe";
 		jugador.setNombreJugador(nombrevalido);
@@ -165,7 +172,7 @@ class AsignarEquipoTest {
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNotNull(jugadorGuardado);
-		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador().toUpperCase());
+		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
 		assertEquals(edadValida, jugadorGuardado.getEdad());
 		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
 	}
@@ -177,6 +184,7 @@ class AsignarEquipoTest {
 
 		Jugador jugador = new Jugador();
 		String nombrevalido = "Alejandro";
+		nombrevalido.toUpperCase();
 		int edadValida = 20;
 		String idiomaValido = "";
 		jugador.setNombreJugador(nombrevalido);
@@ -187,7 +195,7 @@ class AsignarEquipoTest {
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNotNull(jugadorGuardado);
-		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador().toUpperCase());
+		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
 		assertEquals(edadValida, jugadorGuardado.getEdad());
 		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
 	}
@@ -197,6 +205,7 @@ class AsignarEquipoTest {
 
 		Jugador jugador = new Jugador();
 		String nombrevalido = "Alejandro";
+		nombrevalido.toUpperCase();
 		int edadValida = 20;
 		String idiomaValido = "castellano";
 		jugador.setNombreJugador(nombrevalido);
@@ -207,7 +216,7 @@ class AsignarEquipoTest {
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNotNull(jugadorGuardado);
-		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador().toUpperCase());
+		assertEquals(nombrevalido, jugadorGuardado.getNombreJugador());
 		assertEquals(edadValida, jugadorGuardado.getEdad());
 		assertEquals(idiomaValido, jugadorGuardado.getIdioma());
 	
@@ -223,11 +232,12 @@ class AsignarEquipoTest {
 			Equipo equipo = new Equipo();
 			String nombre= "PraiseTheSun";
 			int ranking = 1;
+			nombre.toUpperCase();
 			equipo.setNombreEquipo(nombre);
 			equipo.setRanking(ranking);
 			asignarEquipo.setEquipo(equipo);
 			Equipo equipoGuardado = asignarEquipo.getEquipo();
-			assertEquals(nombre, equipoGuardado.getNombreEquipo().toUpperCase());
+			assertEquals(nombre, equipoGuardado.getNombreEquipo());
 			assertEquals(ranking, equipoGuardado.getRanking());
 			assertNotNull(equipoGuardado);
 		}
@@ -298,11 +308,12 @@ class AsignarEquipoTest {
 			Equipo equipo = new Equipo();
 			String nombre= "PraiseTheSun";
 			int ranking = 1;
+			nombre.toUpperCase();
 			equipo.setNombreEquipo(nombre);
 			equipo.setRanking(ranking);
 			asignarEquipo.setEquipo(equipo);
 			Equipo equipoGuardado = asignarEquipo.getEquipo();
-			assertEquals(nombre, equipoGuardado.getNombreEquipo().toUpperCase());
+			assertEquals(nombre, equipoGuardado.getNombreEquipo());
 			assertEquals(ranking, equipoGuardado.getRanking());
 			assertNotNull(equipoGuardado);
 			
