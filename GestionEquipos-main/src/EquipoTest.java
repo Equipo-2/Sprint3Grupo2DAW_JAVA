@@ -21,7 +21,7 @@ class EquipoTest {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "";
 		equipo.NombreEquipo(nombreEquipo);
-		assertEquals(null,equipo.getNombreEquipo());
+		assertEquals(null,equipo.getNombreEquipo().toUpperCase());
 	}
 
 	//Guardar equipo con menos de 4 caracteres
@@ -29,7 +29,7 @@ class EquipoTest {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "Sol";
 		equipo.NombreEquipo(nombreEquipo);
-		assertEquals(null,equipo.getNombreEquipo());
+		assertEquals(null,equipo.getNombreEquipo().toUpperCase());
 	}
 
 	//Guardar equipo con 5 caracteres
@@ -37,7 +37,7 @@ class EquipoTest {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "Prais";
 		equipo.NombreEquipo(nombreEquipo);
-		assertEquals(nombreEquipo,equipo.getNombreEquipo());
+		assertEquals(nombreEquipo,equipo.getNombreEquipo().toUpperCase());
 	}
 
 	//Guardar equipo con más de 5 caracteres
@@ -45,7 +45,7 @@ class EquipoTest {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "Los osos";
 		equipo.NombreEquipo(nombreEquipo);
-		assertEquals(nombreEquipo,equipo.getNombreEquipo());
+		assertEquals(nombreEquipo,equipo.getNombreEquipo().toUpperCase());
 	}
 
 	//Guardar equipo con menos de 20 caracteres
@@ -53,7 +53,7 @@ class EquipoTest {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "PraiseTheSun";
 		equipo.NombreEquipo(nombreEquipo);
-		assertEquals(nombreEquipo,equipo.getNombreEquipo());
+		assertEquals(nombreEquipo,equipo.getNombreEquipo().toUpperCase());
 	}
 
 	//Guardar equipo con 20 caracteres
@@ -61,7 +61,7 @@ class EquipoTest {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "File Anan Rizably Se";
 		equipo.NombreEquipo(nombreEquipo);
-		assertEquals(nombreEquipo,equipo.getNombreEquipo());
+		assertEquals(nombreEquipo,equipo.getNombreEquipo().toUpperCase());
 	}
 
 	//Guardar equipo con más de 20 caracteres
@@ -69,7 +69,7 @@ class EquipoTest {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "Supercalifragilisticoespialidoso";
 		equipo.NombreEquipo(nombreEquipo);
-		assertEquals(null,equipo.getNombreEquipo());
+		assertEquals(null,equipo.getNombreEquipo().toUpperCase());
 	}
 	
 	//Guardar equipo con caracteres invalidos
@@ -77,14 +77,14 @@ class EquipoTest {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "Los Limones_01";
 		equipo.NombreEquipo(nombreEquipo);
-		assertEquals(null,equipo.getNombreEquipo());
+		assertEquals(null,equipo.getNombreEquipo().toUpperCase());
 	}
 	@Test
 	void testSetMayusNombreEquipo(){
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "Los osos";
 		equipo.NombreEquipo(nombreEquipo);
-		assertEquals(nombreEquipo.toUpperCase(),equipo.getNombreEquipo());
+		assertEquals(nombreEquipo,equipo.getNombreEquipo().toUpperCase());
 		
 	}
 	
