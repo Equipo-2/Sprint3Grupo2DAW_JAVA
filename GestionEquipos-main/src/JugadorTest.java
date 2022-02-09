@@ -21,7 +21,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "";
 		jugador.setNombreJugador(nombreJugador);
-		assertEquals(null, jugador.getNombreJugador());
+		assertEquals(null, jugador.getNombreJugador().toUpperCase());
 	}
 
 	//Guardar jugador con menos de 4 caracteres
@@ -29,7 +29,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Ana";
 		jugador.setNombreJugador(nombreJugador);
-		assertEquals(null, jugador.getNombreJugador());
+		assertEquals(null, jugador.getNombreJugador().toUpperCase());
 	}
 
 	//Guardar jugador con 4 caracteres
@@ -37,7 +37,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Juan";
 		jugador.setNombreJugador(nombreJugador);
-		assertEquals(nombreJugador.toUpperCase(),jugador.getNombreJugador());
+		assertEquals(nombreJugador.toUpperCase(),jugador.getNombreJugador().toUpperCase());
 	}
 
 	//Guardar jugador con más de 4 caracteres
@@ -45,7 +45,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Mortimer";
 		jugador.setNombreJugador(nombreJugador);
-		assertEquals(nombreJugador.toUpperCase(), jugador.getNombreJugador());
+		assertEquals(nombreJugador.toUpperCase(), jugador.getNombreJugador().toUpperCase());
 	}
 
 	//Guardar jugador con menos de 20 caracteres
@@ -53,7 +53,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Pepe Domingo";
 		jugador.setNombreJugador(nombreJugador);
-		assertEquals(nombreJugador.toUpperCase(),jugador.getNombreJugador());
+		assertEquals(nombreJugador.toUpperCase(),jugador.getNombreJugador().toUpperCase());
 	}
 
 	//Guardar jugador con 20 caracteres
@@ -61,7 +61,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Pepe Domingo Castaco";
 		jugador.setNombreJugador(nombreJugador);
-		assertEquals(nombreJugador.toUpperCase(),jugador.getNombreJugador());
+		assertEquals(nombreJugador.toUpperCase(),jugador.getNombreJugador().toUpperCase());
 	}
 
 	//Guardar jugador con más de 20 caracteres
@@ -69,7 +69,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Pepe Domingo Castaco ";
 		jugador.setNombreJugador(nombreJugador);
-		assertEquals(null, jugador.getNombreJugador());
+		assertEquals(null, jugador.getNombreJugador().toUpperCase());
 	}
 	
 	//Guardar jugador con caracteres especiales
@@ -77,7 +77,7 @@ class JugadorTest {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Pepe@Domingo!88";
 		jugador.setNombreJugador(nombreJugador);
-		assertEquals(null, jugador.getNombreJugador());
+		assertEquals(null, jugador.getNombreJugador().toUpperCase());
 	}
 	
 //###################################      EDAD      ###################################
