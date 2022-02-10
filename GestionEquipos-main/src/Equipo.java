@@ -1,7 +1,7 @@
 
 public class Equipo {
 	private String nombreEquipo;
-	private int ranking;
+	private int ranking=-1;
 	private String categoriaEquipo;	
 
 	public Equipo() {

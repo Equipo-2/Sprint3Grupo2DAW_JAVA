@@ -19,11 +19,8 @@ class AsignarEquipoTest {
 	//Asignar un jugador que sea nulo
 	void testSetJugadorNulo() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
-
 		Jugador jugador = null;
-		
 		asignarEquipo.setJugador(jugador);
-		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
 		assertNull(jugadorGuardado);
 	}
@@ -66,7 +63,7 @@ class AsignarEquipoTest {
 		asignarEquipo.setJugador(jugador);
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
-		assertNotNull(jugadorGuardado);
+		assertNull(jugadorGuardado);
 	}
 	
 	//Asignar jugador que exista, pero no tenga nombre
@@ -86,7 +83,7 @@ class AsignarEquipoTest {
 		asignarEquipo.setJugador(jugador);
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
-		assertNotNull(jugadorGuardado);
+		assertNull(jugadorGuardado);
 	}
 	
 	//Asignar jugador que exista, pero su edad sea inválida
@@ -106,7 +103,7 @@ class AsignarEquipoTest {
 		asignarEquipo.setJugador(jugador);
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
-		assertNotNull(jugadorGuardado);
+		assertNull(jugadorGuardado);
 	}
 	
 	//Asignar jugador que exista, pero no tenga edad
@@ -146,7 +143,7 @@ class AsignarEquipoTest {
 		asignarEquipo.setJugador(jugador);
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
-		assertNotNull(jugadorGuardado);
+		assertNull(jugadorGuardado);
 	}
 	
 	//Asignar jugador que exista, pero no tenga idioma
@@ -166,7 +163,7 @@ class AsignarEquipoTest {
 		asignarEquipo.setJugador(jugador);
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
-		assertNotNull(jugadorGuardado);
+		assertNull(jugadorGuardado);
 	}
 	@Test
 	void testJugadorNombreMayus() {
@@ -204,8 +201,6 @@ class AsignarEquipoTest {
 	
 			asignarEquipo.setEquipo(equipo);
 			Equipo equipoGuardado = asignarEquipo.getEquipo();
-			assertEquals(nombre, equipoGuardado.getNombreEquipo());
-			assertEquals(ranking, equipoGuardado.getRanking());
 			assertNotNull(equipoGuardado);
 		}
 
@@ -214,7 +209,6 @@ class AsignarEquipoTest {
 		void testAsignarEquipoNulo() {
 			AsignarEquipo asignarEquipo = new AsignarEquipo();
 			Equipo equipo = null;
-
 			asignarEquipo.setEquipo(equipo);
 			assertNull(asignarEquipo.getEquipo());
 		}
