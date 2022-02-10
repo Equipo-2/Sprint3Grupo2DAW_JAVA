@@ -28,7 +28,7 @@ class EquipoTest {
 	@Test void testSetNombreEquipoInvalidoMinimoCaracteres() {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "Sol";
-		nombreEquipo.toUpperCase();
+		nombreEquipo=nombreEquipo.toUpperCase();
 		equipo.setNombreEquipo(nombreEquipo);
 		assertEquals(null,equipo.getNombreEquipo());
 	}
@@ -37,7 +37,7 @@ class EquipoTest {
 	@Test void testSetNombreEquipoValidoMinimoCaracteres() {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "Prais";
-		nombreEquipo.toUpperCase();
+		nombreEquipo=nombreEquipo.toUpperCase();
 		equipo.setNombreEquipo(nombreEquipo);
 		assertEquals(nombreEquipo,equipo.getNombreEquipo());
 	}
@@ -46,7 +46,7 @@ class EquipoTest {
 	@Test void testSetNombreEquipoValido() {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "Los osos";
-		nombreEquipo.toUpperCase();
+		nombreEquipo=nombreEquipo.toUpperCase();
 		equipo.setNombreEquipo(nombreEquipo);
 		assertEquals(nombreEquipo,equipo.getNombreEquipo());
 	}
@@ -55,7 +55,7 @@ class EquipoTest {
 	@Test void testSetNombreEquipoValido2() {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "PraiseTheSun";
-		nombreEquipo.toUpperCase();
+		nombreEquipo=nombreEquipo.toUpperCase();
 		equipo.setNombreEquipo(nombreEquipo);
 		assertEquals(nombreEquipo,equipo.getNombreEquipo());
 	}
@@ -64,7 +64,7 @@ class EquipoTest {
 	@Test void testSetNombreEquipoValidoMaximoCaracteres() {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "File Anan Rizably Se";
-		nombreEquipo.toUpperCase();
+		nombreEquipo=nombreEquipo.toUpperCase();
 		equipo.setNombreEquipo(nombreEquipo);
 		assertEquals(nombreEquipo,equipo.getNombreEquipo());
 	}
@@ -73,7 +73,7 @@ class EquipoTest {
 	@Test void testSetNombreEquipoInvalidoMaximoCaracteres() {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "Supercalifragilisticoespialidoso";
-		nombreEquipo.toUpperCase();
+		nombreEquipo=nombreEquipo.toUpperCase();
 		equipo.setNombreEquipo(nombreEquipo);
 		assertEquals(null,equipo.getNombreEquipo());
 	}
@@ -82,7 +82,7 @@ class EquipoTest {
 	@Test void testSetNombreEquipoInvalidoCaracteresInvalidos() {
 		Equipo equipo = new Equipo();
 		String nombreEquipo = "Los Limones_01";
-		nombreEquipo.toUpperCase();
+		nombreEquipo=nombreEquipo.toUpperCase();
 		equipo.setNombreEquipo(nombreEquipo);
 		assertEquals(null,equipo.getNombreEquipo());
 	}

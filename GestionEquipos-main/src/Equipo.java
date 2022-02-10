@@ -36,24 +36,18 @@ public class Equipo {
 		}
 	}
 	public String categoriaEquipo() {
-		if (nombreEquipo==null && ranking==-1) {
-			categoriaEquipo=null;
-		}else {
-			switch (ranking) {
-			case 1:
-			case 2:
-				categoriaEquipo="categoria tercera";
-			case 3:
-			case 4:
-			case 5:
-			case 6:
-				categoriaEquipo="categoria segunda";
-			case 7:
-			case 8:
-			case 9:
-			case 10:
+		int rankingInvalido = -1;
+		
+		if (nombreEquipo != null && ranking != rankingInvalido) {
+			if (ranking == 10 || ranking == 9 || ranking == 8 || ranking == 7) {
 				categoriaEquipo="categoria primera";
-			}	
+			} else if (ranking == 6 || ranking == 5 || ranking == 4 || ranking == 3) {
+				categoriaEquipo="categoria segunda";
+			} else if (ranking == 2 || ranking == 1 ) {
+				categoriaEquipo="categoria tercera";
+			} 
+		} else {
+			categoriaEquipo = null;
 		}
 		return categoriaEquipo;
 	}
