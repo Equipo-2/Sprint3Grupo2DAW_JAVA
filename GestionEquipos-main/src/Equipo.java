@@ -4,16 +4,20 @@ public class Equipo {
 	private int ranking;
 	private String categoriaEquipo;	
 
+	public Equipo() {
+		
+	}
 	
-	public void setNombreEquipo(String nombreEquipo) {
+ 	public void setNombreEquipo(String nombreEquipo) {
 		if (nombreEquipo==null) {
 			this.nombreEquipo=null;
 		}else {
 			boolean letra=true;
-			nombreEquipo.toUpperCase();
+			nombreEquipo = nombreEquipo.toUpperCase();
 			
 			for (int i=0;i<nombreEquipo.length() && letra;i++) {
-				if ((nombreEquipo.charAt(i)>=('A') && nombreEquipo.charAt(i)<=('Z') || nombreEquipo.charAt(i)==(' ')) &&
+				if ((nombreEquipo.charAt(i)>=('A') && nombreEquipo.charAt(i)<=('Z') 
+						|| nombreEquipo.charAt(i)==(' ')) &&
 						nombreEquipo.length()>=5 && nombreEquipo.length()<=20) {
 					this.nombreEquipo=nombreEquipo;
 					letra=true;
@@ -33,26 +37,25 @@ public class Equipo {
 	}
 	public String categoriaEquipo() {
 		if (nombreEquipo==null && ranking==-1) {
-			return categoriaEquipo=null;
+			categoriaEquipo=null;
 		}else {
 			switch (ranking) {
 			case 1:
 			case 2:
-				return categoriaEquipo="categoria tercera";
+				categoriaEquipo="categoria tercera";
 			case 3:
 			case 4:
 			case 5:
 			case 6:
-				return categoriaEquipo="categoria segunda";
+				categoriaEquipo="categoria segunda";
 			case 7:
 			case 8:
 			case 9:
 			case 10:
-				return categoriaEquipo="categoria primera";
-			default:
-				return categoriaEquipo=null;
+				categoriaEquipo="categoria primera";
 			}	
 		}
+		return categoriaEquipo;
 	}
 	
 	public String getNombreEquipo() {
@@ -60,9 +63,6 @@ public class Equipo {
 	}
 	public int getRanking() {
 		return ranking;
-	}
-	public String getCategoriaEquipo() {
-		return categoriaEquipo;
 	}
 
 
