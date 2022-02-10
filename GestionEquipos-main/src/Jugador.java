@@ -40,7 +40,7 @@ public class Jugador {
        /**
   	* Metodo para crear la edad del jugador
    	* @param edadNula - La edad dada no es valida, se interpreta como '-1'
-   	* @param edadMinima - La edad imina necesaria para aceptar al jugador
+   	* @param edadMinima - La edad minima necesaria para aceptar al jugador
    	* @param edadMaxima - La edad maxima posible para aceptar al jugador
 	*
         */

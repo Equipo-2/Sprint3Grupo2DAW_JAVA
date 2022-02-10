@@ -1,20 +1,29 @@
-
+/**
+ * La clase Asignar Equipo y sus metodos (Equipo,Jugador)
+ * 
+ */
 public class AsignarEquipo {
 	private Equipo equipo;
 	private Jugador jugador;
-
-
+		
+	
 	public AsignarEquipo() {
 
 	}
-
+	
+	/**
+	 * Metodo para colocar un equipo
+	 * @param equipo
+	 */
+	
 	public void setEquipo(Equipo equipo) {
-		if(equipo!=null) {
-			this.equipo=equipo;
-			if(equipo.getNombreEquipo()!=null && equipo.getRanking()!=-1) {
-				this.equipo=equipo;
+		
+		if( equipo!= null ) {
+			this.equipo = equipo;
+			if( equipo.getNombreEquipo()!= null  &&  equipo.getRanking()!= -1 ) {
+				this.equipo = equipo;
 			}else {
-				this.equipo=null; 
+				this.equipo = null; 
 			}
 		}
 	}

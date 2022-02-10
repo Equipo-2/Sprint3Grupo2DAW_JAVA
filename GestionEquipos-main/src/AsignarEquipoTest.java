@@ -187,93 +187,156 @@ class AsignarEquipoTest {
 	
 	/////////////////////////////////////////////////////////////////////////
 	
-	//Asignar equipo que exista y tenga todos los campos validos
+	
 		@Test
+		//Equipo que exista con los campos validos
 		void testAsignarEquipoCamposValidos() {
 
 			AsignarEquipo asignarEquipo = new AsignarEquipo();
+			
 			Equipo equipo = new Equipo();
-			String nombre= "PraiseTheSun";
+			
+			String nombre = "PraiseTheSun";
+			
 			int ranking = 1;
+			
 			nombre.toUpperCase();
+			
 			equipo.setNombreEquipo(nombre);
+			
 			equipo.setRanking(ranking);
 	
 			asignarEquipo.setEquipo(equipo);
+			
 			Equipo equipoGuardado = asignarEquipo.getEquipo();
+			
 			assertNotNull(equipoGuardado);
 		}
 
-		//Asignar equipo que no exista (es decir nulo)
+	
 		@Test
+		//Equipo que no exista (nulo)
 		void testAsignarEquipoNulo() {
+			
 			AsignarEquipo asignarEquipo = new AsignarEquipo();
+			
 			Equipo equipo = null;
+			
 			asignarEquipo.setEquipo(equipo);
+			
 			assertNull(asignarEquipo.getEquipo());
+			
 		}
 
-		//Asignar equipo que exista pero que su nombre sea inválido
+		
 		@Test
+		//Equipo que su nombre sea inválido
 		void testAsignarEquipoNombreInvalido() {
+			
 			AsignarEquipo asignarEquipo = new AsignarEquipo();
+			
 			Equipo equipo = new Equipo();
+			
 			String nombre = "Sol";
+			
 			equipo.setNombreEquipo(nombre);
+			
 			asignarEquipo.setEquipo(equipo);
+			
 			Equipo equipoGuardado = asignarEquipo.getEquipo();
+			
 			assertNull(equipoGuardado);
+			
 		}
 
-		//Asignar equipo que exista pero que no tenga nombre
+	
 		@Test
+		//Equipo que no tenga nombre
 		void testAsignarEquipoSinNombre() {
+			
 			AsignarEquipo asignarEquipo = new AsignarEquipo();
+			
 			Equipo equipo = new Equipo();
+			
 			String nombre = null;
+			
 			equipo.setNombreEquipo(nombre);
+			
 			asignarEquipo.setEquipo(equipo);
+			
 			Equipo equipoGuardado = asignarEquipo.getEquipo();
+			
 			assertNull(equipoGuardado);
+			
 		}
 
-		//Asignar equipo que exista pero que tenga ranking inválido
+	
 		@Test
+		//Equipo con ranking inválido
 		void testAsignarEquipoRankingInválido() {
+			
 			AsignarEquipo asignarEquipo = new AsignarEquipo();
+			
 			Equipo equipo = new Equipo();
+			
 			String nombre = "Tzedakah";
-			int ranking= -1;
+			
+			int ranking = -1;
+			
 			equipo.setRanking(ranking);
+			
 			equipo.setNombreEquipo(nombre);
+			
 			asignarEquipo.setEquipo(equipo);
+			
 			Equipo equipoGuardado = asignarEquipo.getEquipo();
+			
 			assertNull(equipoGuardado);
+			
 		}
 
 
-		//Asignar equipo que exista pero que no tenga ranking
+		
 		@Test
+		//Equipo que no tenga ranking
 		void testAsignarEquipoSinRanking() {
+			
 			AsignarEquipo asignarEquipo = new AsignarEquipo();
+			
 			Equipo equipo = new Equipo();
+			
 			String nombre = "Overgeared";
+			
 			equipo.setNombreEquipo(nombre);
+			
 			asignarEquipo.setEquipo(equipo);
+			
 			Equipo equipoGuardado = asignarEquipo.getEquipo();
+			
 			assertNull(equipoGuardado);
 		}
 		@Test
+		//Nombre guardado en mayusculas
 		void testGuardarNombreMayus() {
+			
 			AsignarEquipo asignarEquipo = new AsignarEquipo();
+			
 			Equipo equipo = new Equipo();
-			String nombre= "PraiseTheSun";
+			
+			String nombre = "PraiseTheSun";
+			
 			int ranking = 1;
+			
 			nombre.toUpperCase();
+			
 			equipo.setNombreEquipo(nombre);
+			
 			equipo.setRanking(ranking);
+			
 			asignarEquipo.setEquipo(equipo);
+			
 			Equipo equipoGuardado = asignarEquipo.getEquipo();
+			
 			assertNotNull(equipoGuardado);
 			
 		}
