@@ -1,11 +1,11 @@
 /**
- * La clase Jugador y sus métodos (nombre, edad, idioma, tipoJugador)
+ * La clase Jugador y sus metodos (nombre, edad, idioma, tipoJugador)
  * 
  */
-
 public class Jugador {
 	private String nombre;
 	private String idioma;
+	private String tipoJugador;
 	private int edad;
 	
 	public Jugador () {
@@ -13,11 +13,11 @@ public class Jugador {
 		}
 
        /**
-	* Método para crear el nombre del jugador
-	* @param nombreMinimoCaracteres - El número mínimo de caracteres necesarios ->
-	* -> para que el nombre sea válido
-	* @param nombreMaximoCaracteres - El número máximo de caracteres posible ->
-	* -> para que el nombre sea válido
+	* Metodo para crear el nombre del jugador
+	* @param nombreMinimoCaracteres - El numero minimo de caracteres necesarios ->
+	* -> para que el nombre sea valido
+	* @param nombreMaximoCaracteres - El numero maximo de caracteres posible ->
+	* -> para que el nombre sea valido
 	* 
 	*/
 	public void setNombreJugador(String nombre) {
@@ -38,12 +38,12 @@ public class Jugador {
 	}
 
        /**
-  	* Método para crear la edad del jugador
-   	* @param edadNula - La edad dada no es válida, se interpreta como '-1'
-   	* @param edadMinima - La edad mímina necesaria para aceptar al jugador
-   	* @param edadMaxima - La edad máxima posible para aceptar al jugador
+  	* Metodo para crear la edad del jugador
+   	* @param edadNula - La edad dada no es valida, se interpreta como '-1'
+   	* @param edadMinima - La edad imina necesaria para aceptar al jugador
+   	* @param edadMaxima - La edad maxima posible para aceptar al jugador
 	*
-    	*/
+        */
 	public void setEdad(int edad) {
 
 		int edadNula = -1;
@@ -59,9 +59,9 @@ public class Jugador {
 
 
        /**
-   	* Método para crear el idioma del jugador
-   	* El castellano, inglés, francés y alemán son los idiomas aceptados
-   	* Otros idiomas serán considerados como null (no válidos)
+   	* Metodo para crear el idioma del jugador
+   	* El castellano, ingles, frances y aleman son los idiomas aceptados
+   	* Otros idiomas seran considerados como null (no validos)
 	*
    	*/
 	public void setIdioma(String idioma) {
@@ -76,46 +76,46 @@ public class Jugador {
 			this.idioma = "aleman";
 		} else {
 			this.idioma = null;
-		}
+	}
 
 	}
 
        /**
-   	* @return 'String'
+   	* @return 'String' (devuelve el idioma del jugador)
 	*
-    	*/
+        */
 	public String getIdioma() {
 		return idioma;
 	}
 	
        /**
-   	* @return 'String'
+   	* @return 'String' (devuelve el nombre del jugador)
 	*
-    	*/
+        */
 	public String getNombreJugador() {
 		return nombre;
 	}
 
        /**
-   	* @return 'int'
+   	* @return 'int' edad (devuelve la edad del jugador)
 	*
-    	*/
+        */
 	public int getEdad() {
 		return edad;
 	}
 
        /**
-	* Método para crear el tipo de jugador
-	* @return 'String'
-	* @param edadNula - La edad dada no es válida, se interpreta como '-1'
-	* @param edadMinima - La edad mímina necesaria para aceptar al jugador ->
-	* -> (coincide con la edad mímina para ser un jugador de tipo 'Junior')
-	* @param edadMaximaJunior - La edad máxima posible para crear un jugador 'Junior'
-	* @param edadMinimaSenior - La edad mínima necesaria para crear un jugador 'Senior'
-	* @param edadMaximaSenior - La edad máxima posible para crear un jugador 'Senior'
-	* @param edadMinimaMaster - La edad mínima necesaria para crear un jugador 'Master'
-	* @param edadMaximaMaster - La edad máxima posible para crear un jugador 'Master'
-	* Las edades superiores a 'edadMaximaMaster' devolverán el tipo de jugador 'SuperMaster'
+	* Metodo para crear el tipo de jugador
+	* @return 'String' (devuelve un String con el tipo de jugador)
+	* @param edadNula - La edad dada no es valida, se interpreta como '-1'
+	* @param edadMinima - La edad mimina necesaria para aceptar al jugador ->
+	* -> (coincide con la edad mimina para ser un jugador de tipo 'Junior')
+	* @param edadMaximaJunior - La edad maxima posible para crear un jugador 'Junior'
+	* @param edadMinimaSenior - La edad minima necesaria para crear un jugador 'Senior'
+	* @param edadMaximaSenior - La edad maxima posible para crear un jugador 'Senior'
+	* @param edadMinimaMaster - La edad minima necesaria para crear un jugador 'Master'
+	* @param edadMaximaMaster - La edad maxima posible para crear un jugador 'Master'
+	* Las edades superiores a 'edadMaximaMaster' devolveran el tipo de jugador 'SuperMaster'
 	* 
 	*/
 	public String tipoJugador() {
@@ -129,18 +129,19 @@ public class Jugador {
 		int edadMaximaMaster = 100;
 
 		if (nombre != null && edad != edadNula && idioma != null) {
-			if (edad < edadMinima) {
-				return null;
-			} else if (edad >= edadMinima && edad <= edadMaximaJunior) {
-				return "Junior";
+			if (edad >= edadMinima && edad <= edadMaximaJunior) {
+				tipoJugador = "Junior";
 			} else if (edad >= edadMinimaSenior && edad <= edadMaximaSenior) {
-				return "Senior";
+				tipoJugador = "Senior";
 			} else if (edad >= edadMinimaMaster && edad <= edadMaximaMaster) {
-				return "Master";
-			} return "SuperMaster";
+				tipoJugador = "Master";
+			} else {
+				tipoJugador = "SuperMaster";
+			}
 		} else {
-			return null;
+			tipoJugador = null;
 		}
+		return tipoJugador;
 
 	}
 	
