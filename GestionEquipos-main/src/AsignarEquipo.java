@@ -13,7 +13,8 @@ public class AsignarEquipo {
 	
 	/**
 	 * Metodo para colocar un equipo
-	 * @param equipo
+	 * Mientras que el nombre del equipo no sea null y el ranking tampoco sea null el equipo se guarda
+	 * 
 	 */
 	
 	public void setEquipo(Equipo equipo) {
