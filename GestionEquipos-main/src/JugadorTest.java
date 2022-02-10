@@ -39,7 +39,7 @@ class JugadorTest {
 		assertEquals(nombreJugador.toUpperCase(),jugador.getNombreJugador());
 	}
 
-	//Guardar jugador con más de 4 caracteres
+	//Guardar jugador con mas de 4 caracteres
 	@Test void testSetNombreJugadorValido() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Mortimer";
@@ -63,7 +63,7 @@ class JugadorTest {
 		assertEquals(nombreJugador.toUpperCase(),jugador.getNombreJugador());
 	}
 
-	//Guardar jugador con más de 20 caracteres
+	//Guardar jugador con mas de 20 caracteres
 	@Test void testSetNombreJugadorInvalidoMaximoCaracteres() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Pepe Domingo Castaco ";
@@ -232,7 +232,7 @@ class JugadorTest {
 		});
 	}
 	
-	//Guardar tipo de jugador junior mímino (campos válidos)
+	//Guardar tipo de jugador junior mimino (campos validos)
 	@Test
 	void tipoJugadorJuniorMinimo () {
 		Jugador jugador = new Jugador();
@@ -242,7 +242,7 @@ class JugadorTest {
 		assertEquals("Junior", jugador.tipoJugador());
 	}
 	
-	//Guardar tipo de jugador junior máximo (campos válidos)
+	//Guardar tipo de jugador junior maximo (campos validos)
 	@Test
 	void tipoJugadorJuniorMaximo () {
 		Jugador jugador = new Jugador();
@@ -252,7 +252,7 @@ class JugadorTest {
 		assertEquals("Junior", jugador.tipoJugador());
 	}
 	
-	//Guardar tipo de jugador senior mímino (campos válidos)
+	//Guardar tipo de jugador senior mimino (campos validos)
 	@Test
 	void tipoJugadorSeniorMinimo () {
 		Jugador jugador = new Jugador();
@@ -262,7 +262,7 @@ class JugadorTest {
 		assertEquals("Senior", jugador.tipoJugador());
 	}
 	
-	//Guardar tipo de jugador senior máximo (campos válidos)
+	//Guardar tipo de jugador senior maximo (campos validos)
 	@Test
 	void tipoJugadorSeniorMaximo () {
 		Jugador jugador = new Jugador();
@@ -272,7 +272,7 @@ class JugadorTest {
 		assertEquals("Senior", jugador.tipoJugador());
 	}
 	
-	//Guardar tipo de jugador master mímino (campos válidos)
+	//Guardar tipo de jugador master mimino (campos validos)
 	@Test
 	void tipoJugadorMasterMinimo () {
 		Jugador jugador = new Jugador();
@@ -282,7 +282,7 @@ class JugadorTest {
 		assertEquals("Master", jugador.tipoJugador());
 	}
 	
-	//Guardar tipo de jugador master máximo (campos válidos)
+	//Guardar tipo de jugador master maximo (campos validos)
 	@Test
 	void tipoJugadorMasterMaximo () {
 		Jugador jugador = new Jugador();
@@ -292,7 +292,7 @@ class JugadorTest {
 		assertEquals("Master", jugador.tipoJugador());
 	}
 	
-	//Guardar tipo de jugador supermaster (campos válidos)
+	//Guardar tipo de jugador supermaster (campos validos)
 	@Test
 	void tipoJugadorSupermaster () {
 		Jugador jugador = new Jugador();
