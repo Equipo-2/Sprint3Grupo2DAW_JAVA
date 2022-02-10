@@ -12,18 +12,19 @@ public class AsignarEquipo {
 	}
 	
 	/**
-	 * Metodo para colocar un equipo
+	 * Metodo para colocar a un equipo
 	 * Mientras que el nombre del equipo no sea null y el ranking tampoco sea null el equipo se guarda
-	 * 
+	 * @param rankingInvalido -> Es el ranking no aceptado en un equipo
 	 */
-	
 	public void setEquipo(Equipo equipo) {
+		
+		int rankingInvalido = -1;
 		
 		if( equipo!= null ) {
 			this.equipo = equipo;
-			if( equipo.getNombreEquipo()!= null  &&  equipo.getRanking()!= -1 ) {
+			if( equipo.getNombreEquipo()!= null  &&  equipo.getRanking()!= rankingInvalido ) {
 				this.equipo = equipo;
-			}else {
+			} else {
 				this.equipo = null; 
 			}
 		}
@@ -35,13 +36,16 @@ public class AsignarEquipo {
 		if (jugador!=null) {
 			if (jugador.getNombreJugador()!=null && jugador.getEdad()!=-1 && jugador.getIdioma()!=null) {
 				this.jugador = jugador;
-			}else {
+			} else {
 				this.jugador = null;
 			}
 		}
 
 	}
-
+/**
+ * 
+ * @return - Devuelve el equipo que ha sido validado antes
+ */
 	public Equipo getEquipo(){
 		return equipo;
 	}
