@@ -189,8 +189,7 @@ class JugadorTest {
 	//##############################      TIPO DE JUGADOR      ###################################
 
 	//Guardar tipo de jugador nombre null
-	@Test
-	void tipoJugadorInvalidoNombre () {
+	@Test void tipoJugadorInvalidoNombre () {
 		Jugador jugador = new Jugador();
 		jugador.setNombreJugador(null);
 		jugador.setEdad(18);
@@ -199,8 +198,7 @@ class JugadorTest {
 	}
 	
 	//Guardar tipo de jugador edad null
-	@Test
-	void tipoJugadorInvalidoEdad () {
+	@Test void tipoJugadorInvalidoEdad () {
 		Jugador jugador = new Jugador();
 		jugador.setNombreJugador("Pepe");
 		jugador.setEdad(-1);
@@ -209,8 +207,7 @@ class JugadorTest {
 	}
 	
 	//Guardar tipo de jugador idioma null
-	@Test
-	void tipoJugadorInvalidoIdioma () {
+	@Test void tipoJugadorInvalidoIdioma () {
 		Jugador jugador = new Jugador();
 		assertThrows(NullPointerException.class, ()->{
 			jugador.setNombreJugador("Josep");
@@ -221,8 +218,7 @@ class JugadorTest {
 	}
 	
 	//Guardar tipo de jugador todo null
-	@Test
-	void tipoJugadorInvalidoTodo () {
+	@Test void tipoJugadorInvalidoTodo () {
 		Jugador jugador = new Jugador();
 		assertThrows(NullPointerException.class, ()->{
 			jugador.setNombreJugador(null);
@@ -233,8 +229,7 @@ class JugadorTest {
 	}
 	
 	//Guardar tipo de jugador junior mimino (campos validos)
-	@Test
-	void tipoJugadorJuniorMinimo () {
+	@Test void tipoJugadorJuniorMinimo () {
 		Jugador jugador = new Jugador();
 		jugador.setNombreJugador("Juan");
 		jugador.setEdad(18);
@@ -243,8 +238,7 @@ class JugadorTest {
 	}
 	
 	//Guardar tipo de jugador junior maximo (campos validos)
-	@Test
-	void tipoJugadorJuniorMaximo () {
+	@Test void tipoJugadorJuniorMaximo () {
 		Jugador jugador = new Jugador();
 		jugador.setNombreJugador("Pepe");
 		jugador.setEdad(25);
@@ -253,8 +247,7 @@ class JugadorTest {
 	}
 	
 	//Guardar tipo de jugador senior mimino (campos validos)
-	@Test
-	void tipoJugadorSeniorMinimo () {
+	@Test void tipoJugadorSeniorMinimo () {
 		Jugador jugador = new Jugador();
 		jugador.setNombreJugador("Juan");
 		jugador.setEdad(26);
@@ -263,8 +256,7 @@ class JugadorTest {
 	}
 	
 	//Guardar tipo de jugador senior maximo (campos validos)
-	@Test
-	void tipoJugadorSeniorMaximo () {
+	@Test void tipoJugadorSeniorMaximo () {
 		Jugador jugador = new Jugador();
 		jugador.setNombreJugador("Pepe");
 		jugador.setEdad(35);
@@ -273,8 +265,7 @@ class JugadorTest {
 	}
 	
 	//Guardar tipo de jugador master mimino (campos validos)
-	@Test
-	void tipoJugadorMasterMinimo () {
+	@Test void tipoJugadorMasterMinimo () {
 		Jugador jugador = new Jugador();
 		jugador.setNombreJugador("Juan");
 		jugador.setEdad(36);
@@ -283,8 +274,7 @@ class JugadorTest {
 	}
 	
 	//Guardar tipo de jugador master maximo (campos validos)
-	@Test
-	void tipoJugadorMasterMaximo () {
+	@Test void tipoJugadorMasterMaximo () {
 		Jugador jugador = new Jugador();
 		jugador.setNombreJugador("Pepe");
 		jugador.setEdad(100);
@@ -293,8 +283,7 @@ class JugadorTest {
 	}
 	
 	//Guardar tipo de jugador supermaster (campos validos)
-	@Test
-	void tipoJugadorSupermaster () {
+	@Test void tipoJugadorSupermaster () {
 		Jugador jugador = new Jugador();
 		jugador.setNombreJugador("Pepe");
 		jugador.setEdad(101);

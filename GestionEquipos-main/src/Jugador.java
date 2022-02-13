@@ -43,7 +43,7 @@ public class Jugador {
    	* @param edadMinima - La edad minima necesaria para aceptar al jugador
    	* @param edadMaxima - La edad maxima posible para aceptar al jugador
 	*
-        */
+    */
 	public void setEdad(int edad) {
 
 		int edadNula = -1;
@@ -60,20 +60,28 @@ public class Jugador {
 
        /**
    	* Metodo para crear el idioma del jugador
-   	* El castellano, ingles, frances y aleman son los idiomas aceptados
+   	* @param idiomaAceptado1 - El idioma aceptado es el "castellano"
+   	* @param idiomaAceptado2 - El idioma aceptado es el "ingles"
+   	* @param idiomaAceptado3 - El idioma aceptado es el "frances"
+   	* @param idiomaAceptado4 - El idioma aceptado es el "aleman"
    	* Otros idiomas seran considerados como null (no validos)
 	*
    	*/
 	public void setIdioma(String idioma) {
-
-		if (idioma.equals("castellano")) {
-			this.idioma = "castellano";
-		} else if (idioma.equals("ingles")) {
-			this.idioma = "ingles";
-		} else if (idioma.equals("frances")) {
-			this.idioma = "frances";
-		} else if (idioma.equals("aleman")) {
-			this.idioma = "aleman";
+		
+		String idiomaAceptado1 = "castellano";
+		String idiomaAceptado2 = "ingles";
+		String idiomaAceptado3 = "frances";
+		String idiomaAceptado4 = "aleman";
+		
+		if (idioma.equals(idiomaAceptado1)) {
+			this.idioma = idiomaAceptado1;
+		} else if (idioma.equals(idiomaAceptado2)) {
+			this.idioma = idiomaAceptado2;
+		} else if (idioma.equals(idiomaAceptado3)) {
+			this.idioma = idiomaAceptado3;
+		} else if (idioma.equals(idiomaAceptado4)) {
+			this.idioma = idiomaAceptado4;
 		} else {
 			this.idioma = null;
 	}
