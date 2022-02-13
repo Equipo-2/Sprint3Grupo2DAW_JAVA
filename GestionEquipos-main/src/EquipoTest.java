@@ -5,11 +5,12 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 /**
- * 
+ * @author Alicia Ruiznavarro
+ *
  */
 
 /**
- * @author Alicia Ruiznavarro
+ * @Test unitarios para los metodos de la clase Equipo
  *
  */
 class EquipoTest {
