@@ -15,64 +15,72 @@ class JugadorTest {
 	
 //###################################      NOMBRE      ###################################
 
-	//Guardar jugador con 0 caracteres
-	@Test void testSetNombreJugadorInvalidoVacio() {
+	@Test
+	//Guardar jugador con 0 caracteres	
+	void testSetNombreJugadorInvalidoVacio() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "";
 		jugador.setNombreJugador(nombreJugador);
 		assertEquals(null, jugador.getNombreJugador());
 	}
 
-	//Guardar jugador con menos de 4 caracteres
-	@Test void testSetNombreJugadorInvalidoMinimoCaracteres() {
+	@Test
+	//Guardar jugador con menos de 4 caracteres	
+	void testSetNombreJugadorInvalidoMinimoCaracteres() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Ana";
 		jugador.setNombreJugador(nombreJugador);
 		assertEquals(null, jugador.getNombreJugador());
 	}
 
-	//Guardar jugador con 4 caracteres
-	@Test void testSetNombreJugadorValidoMinimoCaracteres() {
+	@Test
+	//Guardar jugador con 4 caracteres	
+	void testSetNombreJugadorValidoMinimoCaracteres() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Juan";
 		jugador.setNombreJugador(nombreJugador);
 		assertEquals(nombreJugador.toUpperCase(),jugador.getNombreJugador());
 	}
 
-	//Guardar jugador con mas de 4 caracteres
-	@Test void testSetNombreJugadorValido() {
+	@Test
+	//Guardar jugador con mas de 4 caracteres	
+	void testSetNombreJugadorValido() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Mortimer";
 		jugador.setNombreJugador(nombreJugador);
 		assertEquals(nombreJugador.toUpperCase(), jugador.getNombreJugador());
 	}
 
-	//Guardar jugador con menos de 20 caracteres
-	@Test void testSetNombreJugadorValido2() {
+	@Test
+	//Guardar jugador con menos de 20 caracteres	
+	void testSetNombreJugadorValido2() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Pepe Domingo";
 		jugador.setNombreJugador(nombreJugador);
 		assertEquals(nombreJugador.toUpperCase(),jugador.getNombreJugador());
 	}
 
-	//Guardar jugador con 20 caracteres
-	@Test void testSetNombreJugadorValidoMaximoCaracteres() {
+	@Test
+	//Guardar jugador con 20 caracteres	
+	void testSetNombreJugadorValidoMaximoCaracteres() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Pepe Domingo Castaco";
 		jugador.setNombreJugador(nombreJugador);
 		assertEquals(nombreJugador.toUpperCase(),jugador.getNombreJugador());
 	}
 
-	//Guardar jugador con mas de 20 caracteres
-	@Test void testSetNombreJugadorInvalidoMaximoCaracteres() {
+	@Test
+	//Guardar jugador con mas de 20 caracteres	
+	void testSetNombreJugadorInvalidoMaximoCaracteres() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Pepe Domingo Castaco ";
 		jugador.setNombreJugador(nombreJugador);
 		assertEquals(null, jugador.getNombreJugador());
 	}
 	
+	@Test
 	//Guardar jugador con caracteres especiales
-	@Test void testSetNombreJugadorInvalidoCaracterEspecial() {
+	void testSetNombreJugadorInvalidoCaracterEspecial() {
 		Jugador jugador = new Jugador();
 		String nombreJugador = "Pepe@Domingo!88";
 		jugador.setNombreJugador(nombreJugador);
@@ -81,8 +89,8 @@ class JugadorTest {
 	
 //###################################      EDAD      ###################################
 	
-	//Guardar edad con INTEGER = null
 	@Test
+	//Guardar edad con INTEGER = null
 	void testSetEdadInvalidoNull () {
 		Jugador jugador = new Jugador();
 	    assertThrows(NullPointerException.class, ()->{
@@ -92,8 +100,8 @@ class JugadorTest {
 	    });
 	}
 	
-	//Guardar edad con INT = 0
 	@Test
+	//Guardar edad con INT = 0
 	void testSetEdadInvalidoMinimo () {
 		Jugador jugador = new Jugador();
 		int edadJugador = 0;
@@ -101,8 +109,8 @@ class JugadorTest {
 		assertEquals(-1, (Integer)jugador.getEdad());
 	}
 	
-	//Guardar edad con INT < 18
 	@Test
+	//Guardar edad con INT < 18
 	void testSetEdadInvalidoMaximo () {
 		Jugador jugador = new Jugador();
 		int edadJugador = 17;
@@ -110,8 +118,8 @@ class JugadorTest {
 		assertEquals(-1, (Integer)jugador.getEdad());
 	}
 	
-	//Guardar edad con INT = 18
 	@Test
+	//Guardar edad con INT = 18
 	void testSetEdadValidoMinimo () {
 		Jugador jugador = new Jugador();
 		int edadJugador = 18;
@@ -119,8 +127,8 @@ class JugadorTest {
 		assertEquals(edadJugador,jugador.getEdad());
 	}
 	
-	//Guardar edad con INT > 18
 	@Test
+	//Guardar edad con INT > 18
 	void testSetEdadValido () {
 		Jugador jugador = new Jugador();
 		int edadJugador = 19;
@@ -130,56 +138,63 @@ class JugadorTest {
 	
 	//##############################      IDIOMA      ###################################
 	
+	@Test
 	//Guardar idioma nulo
-	@Test void testSetIdiomaJugadorNull() {
+	void testSetIdiomaJugadorNull() {
 		Jugador jugador = new Jugador();
 		String idiomaValido = "";
 		jugador.setIdioma(idiomaValido);
 		assertEquals(null, jugador.getIdioma());
 	}
 	
+	@Test
 	//Guardar idioma correcto
-	@Test void testSetIdiomaJugadorCorrecto1() {
+	void testSetIdiomaJugadorCorrecto1() {
 		Jugador jugador = new Jugador();
 		String idiomaValido = "castellano";
 		jugador.setIdioma(idiomaValido);
 		assertEquals(idiomaValido, jugador.getIdioma());
 	}
 	
+	@Test
 	//Guardar idioma correcto
-	@Test void testSetIdiomaJugadorCorrecto2() {
+	void testSetIdiomaJugadorCorrecto2() {
 		Jugador jugador = new Jugador();
 		String idiomaValido = "ingles";
 		jugador.setIdioma(idiomaValido);
 		assertEquals(idiomaValido, jugador.getIdioma());
 	}
 	
+	@Test
 	//Guardar idioma correcto
-	@Test void testSetIdiomaJugadorCorrecto3() {
+	void testSetIdiomaJugadorCorrecto3() {
 		Jugador jugador = new Jugador();
 		String idiomaValido = "frances";
 		jugador.setIdioma(idiomaValido);
 		assertEquals(idiomaValido, jugador.getIdioma());
 	}
 	
+	@Test
 	//Guardar idioma correcto
-	@Test void testSetIdiomaJugadorCorrecto4() {
+	void testSetIdiomaJugadorCorrecto4() {
 		Jugador jugador = new Jugador();
 		String idiomaValido = "aleman";
 		jugador.setIdioma(idiomaValido);
 		assertEquals(idiomaValido, jugador.getIdioma());
 	}
 	
+	@Test
 	//Guardar idioma incorrecto
-	@Test void testSetIdiomaJugadorIncorrecto() {
+	void testSetIdiomaJugadorIncorrecto() {
 		Jugador jugador = new Jugador();
 		String idiomaValido = "japones";
 		jugador.setIdioma(idiomaValido);
 		assertEquals(null, jugador.getIdioma());
 	}
 	
+	@Test
 	//Guardar idioma valor no aceptado
-	@Test void testSetIdiomaJugadorNoAceptado() {
+	void testSetIdiomaJugadorNoAceptado() {
 		Jugador jugador = new Jugador();
 		String idiomaValido = "5";
 		jugador.setIdioma(idiomaValido);
@@ -188,8 +203,9 @@ class JugadorTest {
 	
 	//##############################      TIPO DE JUGADOR      ###################################
 
-	//Guardar tipo de jugador nombre null
-	@Test void tipoJugadorInvalidoNombre () {
+	@Test
+	//Guardar tipo de jugador nombre null	
+	void tipoJugadorInvalidoNombre () {
 		Jugador jugador = new Jugador();
 		jugador.setNombreJugador(null);
 		jugador.setEdad(18);
@@ -197,8 +213,9 @@ class JugadorTest {
 		assertEquals(null, jugador.tipoJugador());
 	}
 	
+	@Test
 	//Guardar tipo de jugador edad null
-	@Test void tipoJugadorInvalidoEdad () {
+	void tipoJugadorInvalidoEdad () {
 		Jugador jugador = new Jugador();
 		jugador.setNombreJugador("Pepe");
 		jugador.setEdad(-1);
@@ -206,8 +223,9 @@ class JugadorTest {
 		assertEquals(null, jugador.tipoJugador());
 	}
 	
+	@Test
 	//Guardar tipo de jugador idioma null
-	@Test void tipoJugadorInvalidoIdioma () {
+	void tipoJugadorInvalidoIdioma () {
 		Jugador jugador = new Jugador();
 		assertThrows(NullPointerException.class, ()->{
 			jugador.setNombreJugador("Josep");
@@ -217,8 +235,9 @@ class JugadorTest {
 		});
 	}
 	
+	@Test
 	//Guardar tipo de jugador todo null
-	@Test void tipoJugadorInvalidoTodo () {
+	void tipoJugadorInvalidoTodo () {
 		Jugador jugador = new Jugador();
 		assertThrows(NullPointerException.class, ()->{
 			jugador.setNombreJugador(null);
@@ -228,8 +247,9 @@ class JugadorTest {
 		});
 	}
 	
+	@Test
 	//Guardar tipo de jugador junior mimino (campos validos)
-	@Test void tipoJugadorJuniorMinimo () {
+	void tipoJugadorJuniorMinimo () {
 		Jugador jugador = new Jugador();
 		jugador.setNombreJugador("Juan");
 		jugador.setEdad(18);
@@ -237,8 +257,9 @@ class JugadorTest {
 		assertEquals("Junior", jugador.tipoJugador());
 	}
 	
+	@Test
 	//Guardar tipo de jugador junior maximo (campos validos)
-	@Test void tipoJugadorJuniorMaximo () {
+	void tipoJugadorJuniorMaximo () {
 		Jugador jugador = new Jugador();
 		jugador.setNombreJugador("Pepe");
 		jugador.setEdad(25);
@@ -246,8 +267,9 @@ class JugadorTest {
 		assertEquals("Junior", jugador.tipoJugador());
 	}
 	
+	@Test
 	//Guardar tipo de jugador senior mimino (campos validos)
-	@Test void tipoJugadorSeniorMinimo () {
+	void tipoJugadorSeniorMinimo () {
 		Jugador jugador = new Jugador();
 		jugador.setNombreJugador("Juan");
 		jugador.setEdad(26);
@@ -255,8 +277,9 @@ class JugadorTest {
 		assertEquals("Senior", jugador.tipoJugador());
 	}
 	
+	@Test
 	//Guardar tipo de jugador senior maximo (campos validos)
-	@Test void tipoJugadorSeniorMaximo () {
+	void tipoJugadorSeniorMaximo () {
 		Jugador jugador = new Jugador();
 		jugador.setNombreJugador("Pepe");
 		jugador.setEdad(35);
@@ -264,8 +287,9 @@ class JugadorTest {
 		assertEquals("Senior", jugador.tipoJugador());
 	}
 	
+	@Test
 	//Guardar tipo de jugador master mimino (campos validos)
-	@Test void tipoJugadorMasterMinimo () {
+	void tipoJugadorMasterMinimo () {
 		Jugador jugador = new Jugador();
 		jugador.setNombreJugador("Juan");
 		jugador.setEdad(36);
@@ -273,8 +297,9 @@ class JugadorTest {
 		assertEquals("Master", jugador.tipoJugador());
 	}
 	
+	@Test
 	//Guardar tipo de jugador master maximo (campos validos)
-	@Test void tipoJugadorMasterMaximo () {
+	void tipoJugadorMasterMaximo () {
 		Jugador jugador = new Jugador();
 		jugador.setNombreJugador("Pepe");
 		jugador.setEdad(100);
@@ -282,8 +307,9 @@ class JugadorTest {
 		assertEquals("Master", jugador.tipoJugador());
 	}
 	
+	@Test
 	//Guardar tipo de jugador supermaster (campos validos)
-	@Test void tipoJugadorSupermaster () {
+	void tipoJugadorSupermaster () {
 		Jugador jugador = new Jugador();
 		jugador.setNombreJugador("Pepe");
 		jugador.setEdad(101);

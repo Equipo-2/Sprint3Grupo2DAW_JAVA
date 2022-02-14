@@ -16,6 +16,8 @@ class AsignarEquipoTest {
 	 * Test method for {@link AsignarEquipo#AsignarEquipo()}.
 	 */
 	
+
+	@Test 
 	//Asignar un jugador que sea nulo
 	void testSetJugadorNulo() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
@@ -25,8 +27,9 @@ class AsignarEquipoTest {
 		assertNull(jugadorGuardado);
 	}
 	
-	//Asignar jugador que exista y tenga todos sus campos válidos
-	@Test void testSetJugadorValido() {
+	@Test
+	//Asignar jugador que exista y tenga todos sus campos validos
+	void testSetJugadorValido() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 
 		Jugador jugador = new Jugador();
@@ -41,12 +44,12 @@ class AsignarEquipoTest {
 		asignarEquipo.setJugador(jugador);
 		
 		Jugador jugadorGuardado = asignarEquipo.getJugador(); 
-		assertNotNull(jugadorGuardado);
-		
+		assertNotNull(jugadorGuardado);	
 	}
 	
-	//Asignar jugador que exista, pero su nombre sea inválido
-	@Test void testSetJugadorNombreInvalido() {
+	@Test
+	//Asignar jugador que exista, pero su nombre sea invalido
+	void testSetJugadorNombreInvalido() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 
 		Jugador jugador = new Jugador();
@@ -64,8 +67,9 @@ class AsignarEquipoTest {
 		assertNull(jugadorGuardado);
 	}
 	
+	@Test
 	//Asignar jugador que exista, pero no tenga nombre
-	@Test void testSetJugadorNombreVacio() {
+	void testSetJugadorNombreVacio() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 
 		Jugador jugador = new Jugador();
@@ -83,8 +87,9 @@ class AsignarEquipoTest {
 		assertNull(jugadorGuardado);
 	}
 	
-	//Asignar jugador que exista, pero su edad sea inválida
-	@Test void testSetJugadorEdadInvalida() {
+	@Test
+	//Asignar jugador que exista, pero su edad sea invalida
+	void testSetJugadorEdadInvalida() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 
 		Jugador jugador = new Jugador();
@@ -102,8 +107,9 @@ class AsignarEquipoTest {
 		assertNull(jugadorGuardado);
 	}
 	
+	@Test
 	//Asignar jugador que exista, pero no tenga edad
-	@Test void testSetJugadorEdadNull() {
+	void testSetJugadorEdadNull() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 
 		Jugador jugador = new Jugador();
@@ -121,8 +127,9 @@ class AsignarEquipoTest {
 		assertNotNull(jugadorGuardado);
 	}
 	
-	//Asignar jugador que exista, pero su idioma sea inválido
-	@Test void testSetJugadorIdiomaInvalido() {
+	@Test
+	//Asignar jugador que exista, pero su idioma sea invalido
+	void testSetJugadorIdiomaInvalido() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 
 		Jugador jugador = new Jugador();
@@ -140,8 +147,9 @@ class AsignarEquipoTest {
 		assertNull(jugadorGuardado);
 	}
 	
+	@Test
 	//Asignar jugador que exista, pero no tenga idioma
-	@Test void testSetJugadorIdiomaNull() {
+	void testSetJugadorIdiomaNull() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 
 		Jugador jugador = new Jugador();
@@ -159,8 +167,9 @@ class AsignarEquipoTest {
 		assertNull(jugadorGuardado);
 	}
 	
+	@Test
 	//Asignar jugador que exista, pero cuyo nombre este en mayus
-	@Test void testJugadorNombreMayus() {
+	void testJugadorNombreMayus() {
 		AsignarEquipo asignarEquipo = new AsignarEquipo();
 
 		Jugador jugador = new Jugador();
