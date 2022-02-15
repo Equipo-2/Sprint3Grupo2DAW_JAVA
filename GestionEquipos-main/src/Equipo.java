@@ -13,42 +13,44 @@ public class Equipo {
 	
     /**
 	* Metodo para crear el nombre del equipo
-	* @param nombreMinimoCaracteres - El numero minimo de caracteres necesarios ->
-	* -> para que el nombre sea valido
-	* @param nombreMaximoCaracteres - El numero maximo de caracteres posible ->
-	* -> para que el nombre sea valido
-	* 
+	* @param nombreEquipo -> Declaramos una variable de tipo String para la funcion setNombreEquipo
 	*/
- 	public void setNombreEquipo(String nombreEquipo) {
- 		
-		int nombreMinimoCaracteres = 5;
-		int nombreMaximoCaracteres = 20;
-		
+ 	public void setNombreEquipo(String nombreEquipo) {		
 		if (nombreEquipo == null) {
 			this.nombreEquipo = null;
 		}else {
-			boolean letra = true;
-			nombreEquipo = nombreEquipo.toUpperCase();
-			
-			for (int i = 0; i < nombreEquipo.length() && letra; i++) {
-				if ((nombreEquipo.charAt(i) >= ('A') && nombreEquipo.charAt(i) <= ('Z') || nombreEquipo.charAt(i) == (' ')) 
-					&& nombreEquipo.length() >= nombreMinimoCaracteres && nombreEquipo.length() <= 20) {
-					this.nombreEquipo = nombreEquipo;
-					letra = true;
-				}else {
-					this.nombreEquipo = null;
-					letra = false;
-				}
-			}
+			comprobarNombre(nombreEquipo);
 		}
 	}
  	
     /**
-	* Metodo para crear el ranking del equipo
-	* @param rankingInvalido - El ranking dado no es valido, se interpreta como '-1'
-	* @param rankingMinimo - El ranking minimo necesario para aceptar al equipo
-	* @param rankingMaximo - El ranking maximo necesario para aceptar al equipo
+	* Metodo para comprobar el nombre del equipo
+	* @param nombreEquipo -> Declaramos una variable de tipo String para la funcion comprobarNombre
 	*/
+ 	public void comprobarNombre(String nombreEquipo) {
+		int nombreMinimoCaracteres = 5;
+		int nombreMaximoCaracteres = 20;
+ 		
+		boolean letra = true;
+		nombreEquipo = nombreEquipo.toUpperCase();
+		
+		for (int i = 0; i < nombreEquipo.length() && letra; i++) {
+			if ((nombreEquipo.charAt(i) >= ('A') && nombreEquipo.charAt(i) <= ('Z') || nombreEquipo.charAt(i) == (' ')) 
+				&& nombreEquipo.length() >= nombreMinimoCaracteres && nombreEquipo.length() <= nombreMaximoCaracteres) {
+				this.nombreEquipo = nombreEquipo;
+				letra = true;
+			}else {
+				this.nombreEquipo = null;
+				letra = false;
+			}
+		}
+	
+ 	}
+ 	
+    /**
+	* Metodo para crear el ranking del equipo
+	* @param edad -> Declaramos una variable de tipo Integer para la funcion setRanking
+ */
 	public void setRanking(int ranking) {
 		
 		int rankingInvalido = -1;
@@ -63,14 +65,8 @@ public class Equipo {
 	}
 	
     /**
-	* Metodo para crear la categoria del equipo
-	* @param rankingInvalido - El ranking dado no es valido, se interpreta como '-1'
-	* @param rankingMaximoP - El ranking maximo necesario para la categoria primera
-	* @param rankingMinimoP - El ranking minimo necesario para la categoria primera
-	* @param rankingMaximoS - El ranking maximo necesario para la categoria segunda
-	* @param rankingMinimoS - El ranking minimo necesario para la categoria segunda
-	* @param rankingMaximoT - El ranking maximo necesario para la categoria tercera
-	* @param rankingMinimoT - El ranking minimo necesario para la categoria tercera
+	* Metodo para crear la categoria del Equipo
+	* No recibe ningun dato de entrada, tan solo devuelve una String (categoriaEquipo)
 	*/
 	public String categoriaEquipo() {
 		
